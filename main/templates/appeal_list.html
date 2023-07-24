@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Appeal List Page</h1>
+    {% for app in appeals %}
+    <p>{{ app.full_name }}</p>
+    <p>{{ app.file_upload }}</p>
+    <a href="{% url 'appeal_detail' app.student_id %}">answer</a>
+    {% endfor %}
+    
+</body>
+</html>
