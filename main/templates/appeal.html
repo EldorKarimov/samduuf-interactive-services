@@ -1,16 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Welcome to appeal page</h1>
-    <form action="" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">submit</button>
-    </form>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block title %} Create Appeal {% endblock %}
+
+{% block content %}
+{% include 'includes/header.html' %}
+<!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0">Murojaat yo'llash</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <form id="createproduct-form" autocomplete="off" class="needs-validation" novalidate method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="product-title-input">O'qituvchi tanlash</label>
+                                            <!-- <select class="form-select" multiple aria-label="multiple select example">
+                                                <option selected>Open this select menu</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select> -->
+                                            {% render_field form.leader class+="form-select" %}
+                                        </div>
+                                        <div>
+                                            <label>Murojaat yo'llash</label>
+
+                                            <div class="mb-3">
+                                                <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea> -->
+                                                {% render_field form.message class+="form-control" id="exampleFormControlTextarea1" rows="10" %}
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label for="formFileLg" class="form-label">Fayl yuklash</label>
+                                            <!-- <input class="form-control form-control-lg" id="formFileLg" type="file"> -->
+                                            {% render_field form.file_upload class+="form-control form-control-lg" id="formFileLg" type="file" %}
+
+                                          </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-end mb-3">
+                                    <button type="submit" class="btn btn-success w-sm">Submit</button>
+                                </div>
+                            </div>
+                            <!-- end col -->
+
+                            
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </form>
+
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <script>document.write(new Date().getFullYear())</script> © Velzon.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-none d-sm-block">
+                                Design & Develop by Themesbrand
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+{% endblock %}

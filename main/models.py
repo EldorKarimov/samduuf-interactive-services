@@ -9,18 +9,17 @@ class Leader(models.Model):
 
     def __str__(self):
         return f"{self.leader.first_name} {self.leader.last_name}"
+    
+    def get_full_name(self):
+        return f"{self.leader.first_name} {self.leader.last_name}" 
 
 class Appeal(models.Model):
     leader = models.ForeignKey(Leader, on_delete=models.CASCADE)
-    student_id = models.CharField(max_length=15)
-    faculty = models.CharField(max_length=60)
-    eduForm = models.CharField(max_length=20)
-    specialty = models.CharField(max_length=60)
-    group = models.CharField(max_length=20)
-    full_name = models.CharField(max_length=80)
-    phone = models.CharField(max_length=13)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
     message = models.TextField()
     file_upload = models.FileField(upload_to='upload/path/', validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png', 'pdf', 'docx', 'pptx'])], null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f"{self.leader.leader.first_name} {self.leader.leader.last_name}"
@@ -28,7 +27,7 @@ class Appeal(models.Model):
 class Answer(models.Model):
     message = models.TextField()
     student_id = models.CharField(max_length=15)
-    leader = models.ForeignKey(Leader, on_delete=models.SET_NULL, null=True, blank=True)
+    leader = models.CharField(max_length=128)
 
     def __str__(self):
         return self.student_id

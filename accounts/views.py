@@ -29,7 +29,7 @@ class LoginView(View):
 class LogoutView(View, LoginRequiredMixin):
     def get(self, request):
         logout(request)
-        return redirect('home')
+        return redirect('login')
 
 class StudentRegisterView(View, HemisApi):
     def get(self, request):

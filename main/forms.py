@@ -9,4 +9,4 @@ class AppealForm(forms.ModelForm):
 class AnswerForm(forms.ModelForm):
     class Meta:
         model = Answer
-        exclude = ['message']
+        exclude = ['leader', 'student_id']

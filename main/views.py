@@ -4,6 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Leader, Appeal, Answer
 from .forms import AppealForm, AnswerForm
+from accounts.permissions import CustomLoginRequiredMixin
 
 class HomePageView(LoginRequiredMixin, View):
     def get(self, request):
@@ -20,13 +21,7 @@ class AppealView(LoginRequiredMixin, View):
         form = AppealForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             form_create = form.save(commit=False)
-            form_create.student_id = request.user.student_id_number
-            form_create.faculty = request.user.faculty
-            form_create.eduForm = request.user.eduForm
-            form_create.specialty = request.user.specialty
-            form_create.group = request.user.group
-            form_create.full_name = request.user.full_name
-            form_create.phone = request.user.phone
+            form_create.student = request.user
             form_create.save()
             return redirect('home')
         else:
@@ -35,17 +30,32 @@ class AppealView(LoginRequiredMixin, View):
             }
             return render(request, 'appeal.html', context)
         
-class AnswerView(LoginRequiredMixin, View):
+class AppealListDetailView(CustomLoginRequiredMixin, View):
     def get(self, request, student_id=None):
-        if student_id is not None:
+        if student_id is None:
+            appeals = Appeal.objects.filter(leader__leader__username=request.user.username)
+            context = {
+                'appeals':appeals
+            }
+            return render(request, 'appeal_list.html', context)
+        else:
             form = AnswerForm()
             context = {
                 'form':form
             }
             return render(request, 'appeal_detail.html', context)
+    def post(self, request, student_id):
+        form = AnswerForm(data=request.POST)
+        if form.is_valid():
+            print(student_id)
+            form_create = form.save(commit=False)
+            form_create.leader = request.user.get_full_name
+            form_create.student_id = student_id
+            form_create.save()
+            return redirect('appeal_list')
         else:
-            appeals = Appeal.objects.all()
+            form = AnswerForm(data=request.POST)
             context = {
-                'appeals':appeals
+                'form':form
             }
-            return render(request, 'appeal_list.html', context)
+            return render(request, 'appeal_detail.html', context)
