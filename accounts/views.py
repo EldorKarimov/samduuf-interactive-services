@@ -26,10 +26,10 @@ class LoginView(View):
             messages.info(request, "username or password error!")
             return render(request, 'signin.html', {'form': form})
         
-class LogoutView(View, LoginRequiredMixin):
+class LogoutView(LoginRequiredMixin, View):
     def get(self, request):
         logout(request)
-        return redirect('login')
+        return redirect('home')
 
 class StudentRegisterView(View, HemisApi):
     def get(self, request):

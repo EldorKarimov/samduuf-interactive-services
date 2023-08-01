@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load widget_tweaks %}
 
 {% block title %} Home Page {% endblock %}
 
@@ -10,11 +11,57 @@
 
         <div class="page-content">
             <div class="container-fluid">
-                <form action="" method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit">submit</button>
-                </form>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">F.I.SH</th>
+                                <td scope="col">{{ appeal_student.student.full_name}}</td>
+                              </tr>
+                              <tr>
+                                <th scope="col">Email</th>
+                                <td scope="col">{{ appeal_student.student.email}}</td>
+                              </tr>
+                              <tr>
+                                <th scope="col">Telefon</th>
+                                <td scope="col">{{ appeal_student.student.phone}}</td>
+                              </tr>
+                              <tr>
+                                <th scope="col">Fakultet</th>
+                                <td scope="col">{{ appeal_student.student.faculty}}</td>
+                              </tr>
+                              <tr>
+                                <th scope="col">Guruh</th>
+                                <td scope="col">{{ appeal_student.student.group}}</td>
+                              </tr>
+                              <tr>
+                                <th scope="col">Mutaxasislik</th>
+                                <td scope="col">{{ appeal_student.student.specialty}}</td>
+                              </tr>
+                              <tr>
+                                <th scope="col">File</th>
+                                <td scope="col">{{ appeal_student.file_upload}}</td>
+                              </tr>
+                            </thead>
+                          </table>
+                          <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Talaba Murojaati</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" readonly rows="10">{{ appeal_student.message}}</textarea>
+                          </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Javob yozish</label>
+                                <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea> -->
+                                {% render_field form.message class+="form-control" id="exampleFormControlTextarea1" rows="10" %}
+                            </div>
+                            <button type="submit" class="btn btn-primary">Yuborish</button>
+                        </form>
+                    </div>
+                </div>
             </div>
             <!-- container-fluid -->
         </div>

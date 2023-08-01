@@ -1,78 +1,28 @@
 {% load static %}
-<!doctype html>
-<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
+<!DOCTYPE html>
+<html lang="en">
 
-
-<!-- Mirrored from themesbrand.com/velzon/html/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jul 2023 11:47:16 GMT -->
 <head>
-
-    <meta charset="utf-8" />
-    <title>{% block title %} {% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-    <meta content="Themesbrand" name="author" />
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="{% static 'assets/images/favicon.ico' %}">
+    <title>Document</title>
 
-    <!-- jsvectormap css -->
-    <link href="{% static 'assets/libs/jsvectormap/css/jsvectormap.min.css' %}" rel="stylesheet" type="text/css" />
-
-    <!--Swiper slider css-->
-    <link href="{% static 'assets/libs/swiper/swiper-bundle.min.css' %}" rel="stylesheet" type="text/css" />
-
-    <!-- Layout config Js -->
-    <script src="{% static 'assets/js/layout.js' %}"></script>
-    <!-- Bootstrap Css -->
-    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
-    <!-- Icons Css -->
-    <link href="{% static 'assets/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
-    <!-- App Css-->
-    <link href="{% static 'assets/css/app.min.css' %}" rel="stylesheet" type="text/css" />
-    <!-- custom Css-->
-    <link href="{% static 'assets/css/custom.min.css' %}" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="https://samduuf.uz/frontend/img/Logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://samduuf.uz/frontend/style/bootstrap.min.css">
-    <link rel="stylesheet" href="./main.css">
-
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 
 <body>
-    
+    {% include 'includes/header.html' %}
 
-    <!-- <div id="layout-wrapper"> -->
-        {% block content %}
+    {% block content %}
 
-        {% endblock %}
-    <!-- </div> -->
-    
+    {% endblock %}
 
     {% include 'includes/footer.html' %}
-    <!-- JAVASCRIPT -->
-    <script src="{% static 'assets/libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'assets/libs/simplebar/simplebar.min.js' %}"></script>
-    <script src="{% static 'assets/libs/node-waves/waves.min.js' %}"></script>
-    <script src="{% static 'assets/libs/feather-icons/feather.min.js' %}"></script>
-    <script src="{% static 'assets/js/pages/plugins/lord-icon-2.1.0.js' %}"></script>
-    <script src="{% static 'assets/js/plugins.js' %}"></script>
 
-    <!-- apexcharts -->
-    <script src="{% static 'assets/libs/apexcharts/apexcharts.min.js' %}"></script>
-
-    <!-- Vector map-->
-    <script src="{% static 'assets/libs/jsvectormap/js/jsvectormap.min.js' %}"></script>
-    <script src="{% static 'assets/libs/jsvectormap/maps/world-merc.js' %}"></script>
-
-    <!--Swiper slider js-->
-    <script src="{% static 'assets/libs/swiper/swiper-bundle.min.js' %}"></script>
-
-    <!-- Dashboard init -->
-    <script src="{% static 'assets/js/pages/dashboard-ecommerce.init.js' %}"></script>
-
-    <!-- App js -->
-    <script src="{% static 'assets/js/app.js' %}"></script>
 </body>
 
-<!-- Mirrored from themesbrand.com/velzon/html/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jul 2023 11:48:34 GMT -->
 </html>
