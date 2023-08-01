@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %} My Info {% endblock %}
+
+{% block content %}
+<main class="container">
+    <div class="row">
+         <div class="col-lg-3 mt-5 mb-5">
+             <div class="section-left">
+                 <h5 class="section-left__title">
+                     Interaktiv xizmatlar
+                 </h5> <hr class="section-left__line">
+                 <p class="section-left__item"><a href="#"><i class="fa-solid fa-bars"></i>Barcha xizmatlar</a></p> <hr class="section-left__line">
+                 <p class="section-left__item"><a href="#"><i class="fa-solid fa-check-double"></i>Mening arizalarim</a></p>
+                 <h5 class="section-left__title">
+                     Mening ma'lumotlarim
+                 </h5> <hr class="section-left__line">
+                 <p class="section-left__item"><a href="#"><i class="fa-solid fa-info"></i>Umumiy ma'lumotlar</a></p> <hr class="section-left__line">
+                 <p class="section-left__item"><i class="fa-regular fa-id-card"></i><a href="#">Pasport ma'lumotlari</a></p> <hr class="section-left__line">
+                 <p class="section-left__item"><a href="#"><i class="fa-solid fa-graduation-cap"></i>Ta'lim ma'lumotlari</a></p> <hr class="section-left__line">
+                 <p class="section-left__item"><a href="#"><i class="fa-solid fa-right-to-bracket"></i>Tizimdan chiqish</a></p>
+
+             </div>
+         </div>
+         <div class="col-lg-9 mt-5 mb-5" style="border: 1px solid rgb(230, 224, 224); border-radius: 5px;">
+             <div class="general-info">
+                 <h1 class="general-info__title">umumiy ma'lumotlar</h1>
+                 <p class="general-info__description">Lorem ipsum dolor sit amet consectetur sapiente voluptatibus optio necessitatibus enim et ex quaerat dicta iusto recusandae excepturi. Deleniti, illum consequuntur tempora doloribus magnam modi magni!</p>
+             </div>
+             <hr style="width: 100%;">
+             <div class="row">
+                 <div class="col-lg-6">
+                     <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">F.I.O</label>
+                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.full_name }}" readonly>
+                     </div>
+                     <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">Jinsi</label>
+                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.gender }}" readonly>
+                     </div>
+                     <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">Elektron pochta</label>
+                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.email }}" readonly>
+                     </div>
+                     <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">Davlat</label>
+                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.country }}" readonly>
+                     </div>
+                 </div>
+                 <div class="col-lg-6">
+                     <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">Tug'ilgan sana</label>
+                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.birth_date }}" readonly>
+                     </div>
+                     <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">Telefon raqami</label>
+                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="+998973950072" readonly>
+                     </div>
+                     <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">Manzili</label>
+                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.address }}" readonly>
+                     </div>
+                 </div>
+             </div>
+         </div>
+    </div>
+ </main>
+{% endblock %}

@@ -22,6 +22,13 @@ class Student(AbstractUser):
     paymentForm = models.CharField(max_length=50, blank=True)
     studentStatus = models.CharField(max_length=20, blank=True)
     image = models.TextField(null=True, blank=True)
+    birth_date = models.CharField(max_length=10, null=True, blank=True)
+    passport_pin = models.CharField(max_length=15, null=True, blank=True)
+    passport_number = models.CharField(max_length=10, null=True, blank=True)
+    gender = models.CharField(max_length=10, null=True, blank=True)
+    country = models.CharField(max_length=50, null=True, blank=True)
+
+
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['first_name', 'last_name']

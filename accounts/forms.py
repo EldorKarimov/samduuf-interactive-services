@@ -34,7 +34,12 @@ class StudentRegisterForm(forms.Form, HemisApi):
             eduType = user_data.get('data').get('educationType').get('name'),
             paymentForm = user_data.get('data').get('paymentForm').get('name'),
             studentStatus = user_data.get('data').get('studentStatus').get('name'),
-            image = user_data.get('data').get('image')
+            image = user_data.get('data').get('image'),
+            birth_date = user_data.get('data').get('birth_date'),
+            passport_pin = user_data.get('data').get('passport_pin'),
+            passport_number = user_data.get('data').get('passport_number'),
+            gender = user_data.get('data').get('gender').get('name'),
+            country = user_data.get('data').get('country').get('name'),
         )
         student.set_password(self.cleaned_data['password'])
         student.save()

@@ -59,3 +59,11 @@ class StudentRegisterView(View, HemisApi):
                     'form':form
                 }
                 return render(request, 'signup.html', context)
+            
+class ProfileDataView(LoginRequiredMixin, View):
+    def get(self, request):
+        student = Student.objects.get(username = request.user.username)
+        context = {
+            'student':student
+        }
+        return render(request, 'profile-data.html', context)

@@ -6,6 +6,7 @@ from .models import Leader, Appeal, Answer
 from .forms import AppealForm, AnswerForm
 from accounts.permissions import CustomLoginRequiredMixin
 from django.contrib import messages
+from accounts.api import HemisApi
 
 class HomePageView(View):
     def get(self, request):
@@ -39,26 +40,16 @@ class AppealToLeaderView(LoginRequiredMixin, View):
             }
             return render(request, 'appeal-to-leader.html', context)
     
-# class AppealView(LoginRequiredMixin, View):
-#     def get(self, request):
-#         form = AppealForm()
-#         context = {
-#             'form':form
-#         }
-#         return render(request, 'appeal.html', context)
-#     def post(self, request):
-#         form = AppealForm(data=request.POST, files=request.FILES)
-#         if form.is_valid():
-#             form_create = form.save(commit=False)
-#             form_create.student = request.user
-#             form_create.save()
-#             return redirect('home')
-#         else:
-#             context = {
-#                 'form':form
-#             }
-#             return render(request, 'appeal.html', context)
-        
+
+class MyApplicationView(LoginRequiredMixin, View):
+    def get(self, request):
+        appeals = Appeal.objects.filter(student__username = request.user.username).order_by('-created_at')
+        context = {
+            'appeals':appeals
+        }
+        return render(request, 'my-application-list.html', context)
+    
+    
 # class AppealListDetailView(CustomLoginRequiredMixin, View):
 #     def get(self, request, appeal_id=None):
 #         if appeal_id is None:
