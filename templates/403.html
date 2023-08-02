@@ -1,0 +1,62 @@
+<!-- templates/403.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>403 Forbidden</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .error-content {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: #f44336;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            margin: 20px 0;
+        }
+
+        .go-home-link {
+            text-decoration: none;
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .go-home-link:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-content">
+            <h1>403 Forbidden</h1>
+            <p>Kechirasiz, sizda bu sahifaga kirishga ruxsat yo‘q.</p>
+            <a href="{% url 'home' %}" class="go-home-link">Bosh sahifaga qaytish</a>
+        </div>
+    </div>
+</body>
+</html>

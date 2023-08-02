@@ -20,8 +20,12 @@ class LoginView(View):
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
             user = form.get_user()
-            login(request, user)
-            return redirect('home')
+            if user.is_superuser:
+                login(request, user)
+                return redirect('appeal_list')
+            else:
+                login(request, user)
+                return redirect('home')
         else:
             messages.info(request, "username or password error!")
             return render(request, 'signin.html', {'form': form})
@@ -67,3 +71,11 @@ class ProfileDataView(LoginRequiredMixin, View):
             'student':student
         }
         return render(request, 'profile-data.html', context)
+
+class EduDataView(LoginRequiredMixin, View):
+    def get(self, request):
+        student = Student.objects.get(username=request.user.username)
+        context = {
+            'student':student
+        }
+        return render(request, 'edu-data.html', context)

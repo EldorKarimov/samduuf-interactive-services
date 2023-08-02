@@ -63,7 +63,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent1">
                 <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Bosh sahifa</a>
+                        <a class="nav-link" href="{% url 'home' %}">Bosh sahifa</a>
                     </li>
 
 
@@ -96,12 +96,17 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">Bog&#039;lanish</a>
+                        <a class="nav-link" href="#">Bog&#039;lanish</a>
                     </li>
-
+                    {% if user.is_authenticated %}
+                    <li class="nav-item nav-item__login">
+                        <a href="#">{{ request.user.first_name }} {{ request.user.last_name }}</a>
+                    </li>
+                    {% else %}
                     <li class="nav-item nav-item__login">
                         <a href="{% url 'login' %}" class="btn btn-outline-primary"> <i class="fa-solid fa-arrow-right-to-bracket"></i> Tizimga kirish</a>
                     </li>
+                    {% endif %}
 
                 </ul>
             </div>

@@ -3,168 +3,36 @@
 {% block title %} {% endblock %}
 
 {% block content %}
-{% include 'includes/header.html' %}
-<!-- ============================================================== -->
-        <!-- Start right Content here -->
-        <!-- ============================================================== -->
-        <div class="main-content">
-
-            <div class="page-content">
-                <div class="container-fluid">
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Murojaat yo'llagan Talabalar Ro'yhati</h4>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card" id="leadsList">
-                                <div class="card-header border-0">
-
-                                    <div class="row g-4 align-items-center">
-                                        <div class="col-sm-3">
-                                            <div class="search-box">
-                                                <input type="text" class="form-control search" placeholder="Search for...">
-                                                <i class="ri-search-line search-icon"></i>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div>
-                                        <div class="table-responsive table-card">
-                                            <table class="table align-middle" id="customerTable">
-                                                <thead class="table-light">
-                                                    <tr>
-                                                        <th class="sort">F.I.SH</th>
-                                                        <th class="sort">Email</th>
-                                                        <th class="sort">Fakultet</th>
-                                                        <th class="sort">Guruh</th>
-                                                        <th class="sort">Mutaxassislik</th>
-                                                        <th class="sort">Telefon</th>
-                                                        <th class="sort">Sana</th>
-                                                        <th class="sort">F.I.SH</th>
-                                                        
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="list form-check-all">
-                                                    {% for appeal in appeals %}
-                                                    <tr>
-                                                        
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="flex-shrink-0">
-                                                                    <img src="{{ appeal.student.image }}" alt="student image" class="avatar-xxs rounded-circle image_src object-fit-cover">
-                                                                </div>
-                                                                <div class="flex-grow-1 ms-2 name">{{ appeal.student.full_name }}</div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="company_name">{{appeal.student.email}}</td>
-                                                        <td class="company_name">{{appeal.student.faculty}}</td>
-                                                        <td class="company_name">{{appeal.student.group}}</td>
-                                                        <td class="company_name">{{appeal.student.specialty}}</td>
-                                                        <td class="company_name">{{appeal.student.phone}}</td>
-                                                        
-                                                        <td class="date">{{ appeal.created_at |date}}</td>
-                                                        <td>
-                                                            <ul class="list-inline hstack gap-2 mb-0">
-                                                                
-                                                                <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Message">
-                                                                    <a href="{% url 'appeal_detail' appeal.id %}" class="text-muted d-inline-block">
-                                                                        <i class="ri-question-answer-line fs-16"></i>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Delete">
-                                                                    <a class="remove-item-btn" data-bs-toggle="modal" href="#deleteRecordModal">
-                                                                        <i class="ri-delete-bin-fill align-bottom text-muted"></i>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                        
-                                                    </tr>
-                                                    {% endfor %}
-                                                </tbody>
-                                            </table>
-                                            <div class="noresult" style="display: none">
-                                                <div class="text-center">
-                                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px"></lord-icon>
-                                                    <h5 class="mt-2">Sorry! No Result Found</h5>
-                                                    <p class="text-muted mb-0">We've searched more than 150+ leads We did not find any leads for you search.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex justify-content-end mt-3">
-                                            <div class="pagination-wrap hstack gap-2">
-                                                <a class="page-item pagination-prev disabled" href="#">
-                                                    Previous
-                                                </a>
-                                                <ul class="pagination listjs-pagination mb-0"></ul>
-                                                <a class="page-item pagination-next" href="#">
-                                                    Next
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="modal-header bg-light p-3">
-                                                    <h5 class="modal-title" id="exampleModalLabel"></h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end modal-->
-
-                                    <!-- Modal -->
-                                    <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-labelledby="deleteRecordLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btn-close"></button>
-                                                </div>
-                                                <div class="modal-body p-5 text-center">
-                                                    <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#405189,secondary:#f06548" style="width:90px;height:90px"></lord-icon>
-                                                    <div class="mt-4 text-center">
-                                                        <h4 class="fs-semibold">You are about to delete a lead ?</h4>
-                                                        <p class="text-muted fs-14 mb-4 pt-1">Deleting your lead will remove all of your information from our database.</p>
-                                                        <div class="hstack gap-2 justify-content-center remove">
-
-                                                            <button class="btn btn-link link-success fw-medium text-decoration-none" id="deleteRecord-close" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</button>
-                                                            <button class="btn btn-danger" id="delete-record">Yes, Delete It!!</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end modal -->
-
-
-                                   
-                                </div>
-                            </div>
-
-                        </div>
-                        <!--end col-->
-                    </div>
-                    <!--end row-->
-
-                </div>
-                <!-- container-fluid -->
-            </div>
-            <!-- End Page-content -->
-
-        </div>
-        <!-- end main content-->
+<main class="container" style="padding: 50px 20px;">
+    <h1 style="font-size: 27px; font-weight: 500; color: blue;">Murojaatlar ro'yhati</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">F.I.SH</th>
+            <th scope="col">Fakultet</th>
+            <th scope="col">Yo'nalish</th>
+            <th scope="col">Guruh</th>
+            <th scope="col">Elektron pochta</th>
+            <th scope="col">Telefon</th>
+            <th scope="col">Harakat</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for appeal in appeals %}
+          <tr>
+            <td>{{ appeal.student.full_name }}</td>
+            <td>{{ appeal.student.faculty }}</td>
+            <td>{{ appeal.student.specialty }}</td>
+            <td>{{ appeal.student.group }}</td>
+            <td>{{ appeal.student.email }}</td>
+            <td>{{ appeal.student.phone }}</td>
+            <td>
+                <a href="{% url 'appeal_delete' appeal.id %}"><i class="fa-solid fa-trash" style="color: red;"></i></a>
+                <a href="{% url 'appeal_detail' appeal.id %}"><i class="fa-regular fa-message ms-2" style="color: rgb(70, 119, 241)"></i></a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+</main>
 {% endblock %}

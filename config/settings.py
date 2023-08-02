@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(xx_@(9a6$(24zaifd1k&0lbu^t=l9jc=jqe_03o(#w1*emx0!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -76,6 +76,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = '/account/signin/'
 
 
 

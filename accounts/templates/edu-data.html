@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %} My Info {% endblock %}
+
+{% block content %}
+<main class="container">
+    <div class="row">
+         {% include 'includes/left.html' %}
+         <div class="col-lg-9 mt-5 mb-5" style="border: 1px solid rgb(230, 224, 224); border-radius: 5px;">
+             <div class="general-info">
+                 <h1 class="general-info__title">Ta'lim ma'lumotlari</h1>
+                 <p class="general-info__description">Lorem ipsum dolor sit amet consectetur sapiente voluptatibus optio necessitatibus enim et ex quaerat dicta iusto recusandae excepturi. Deleniti, illum consequuntur tempora doloribus magnam modi magni!</p>
+             </div>
+             <hr style="width: 100%;">
+             <div class="row">
+                 <div class="col-lg-6">
+                     <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">Muassasa nomi</label>
+                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.university }}" readonly>
+                     </div>
+                     <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">Guruh</label>
+                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.group }}" readonly>
+                     </div>
+                     <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">Ta'lim shakli</label>
+                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.eduForm }}" readonly>
+                     </div>
+                     <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">To'lov shakli</label>
+                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.paymentForm }}" readonly>
+                     </div>
+                 </div>
+                 <div class="col-lg-6">
+                     <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">Fakultet</label>
+                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.faculty }}" readonly>
+                     </div>
+                     <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">Mutaxassislik</label>
+                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.specialty }}" readonly>
+                     </div>
+                     <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">Ta'lim turi</label>
+                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.eduType }}" readonly>
+                     </div>
+                     <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Ta'lim tili</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.eduLang }}" readonly>
+                    </div>
+                 </div>
+             </div>
+         </div>
+    </div>
+ </main>
+{% endblock %}
