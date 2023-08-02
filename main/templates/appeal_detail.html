@@ -51,6 +51,26 @@
             <a href="#" class="btn btn-secondary">Faylni yuklash</a>
         </div>
       </div>
+    </div> <hr>
+
+  <h1 class="general-info__title mt-5">Javob yozish</h1>
+  <div class="row">
+    <div class="col-lg-8">
+      <form action="" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Javob yozish</label>
+          <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea> -->
+          {% render_field form.message class+="form-control" id="exampleFormControlTextarea1" rows="5" %}
+          <br>
+          <button type="submit" class="btn btn-success mb-5">Yuborish</button>
+      </div>
+      </form>
     </div>
+  </div>
+  
+    
+
+
 </main>
 {% endblock %}

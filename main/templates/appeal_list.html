@@ -4,6 +4,13 @@
 
 {% block content %}
 <main class="container" style="padding: 50px 20px;">
+  {% if messages %}
+  {% for mess in messages %}
+  <div class="alert alert-success" role="alert">
+    {{ mess }}
+  </div>
+  {% endfor %}
+  {% endif %}
     <h1 style="font-size: 27px; font-weight: 500; color: blue;">Murojaatlar ro'yhati</h1>
     <table class="table">
         <thead>

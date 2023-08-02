@@ -59,7 +59,7 @@ class MyApplicationView(LoginRequiredMixin, View):
 class AppealListDetailView(CustomLoginRequiredMixin, View):
     def get(self, request, appeal_id=None):
         if appeal_id is None:
-            appeals = Appeal.objects.filter(leader__leader__username=request.user.username)
+            appeals = Appeal.objects.filter(leader__leader__username=request.user.username).order_by('-created_at')
             context = {
                 'appeals':appeals
             }
@@ -80,6 +80,7 @@ class AppealListDetailView(CustomLoginRequiredMixin, View):
             form_create.leader = request.user.get_full_name
             form_create.student_id = appeal.student.student_id_number
             form_create.save()
+            messages.success(request, "Javob muvaffaqqiyatli saqlandi.")
             return redirect('appeal_list')
         else:
             form = AnswerForm(data=request.POST)
