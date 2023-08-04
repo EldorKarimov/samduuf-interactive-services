@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.paginator import Paginator
 
 from .models import Leader, Appeal, Answer
 from .forms import AppealForm, AnswerForm
@@ -76,8 +77,12 @@ class AppealListDetailView(CustomLoginRequiredMixin, View):
     def get(self, request, appeal_id=None):
         if appeal_id is None:
             appeals = Appeal.objects.filter(leader__leader__username=request.user.username).order_by('-created_at')
+            paginator = Paginator(appeals, 20)
+            page_num = request.GET.get('page')
+            page_obj = paginator.get_page(page_num)
+
             context = {
-                'appeals':appeals
+                'appeals':page_obj
             }
             return render(request, 'appeal_list.html', context)
         else:
