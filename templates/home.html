@@ -13,33 +13,33 @@
   <div class="main-section__cards">
     <div class="main-section__card">
       <h1 class="card-icon"><i class="fa-regular fa-user"></i></h1>
-      <h3 class="card-title"><a href="#">Rahbarlarga murojaat</a></h3>
+      <h3 class="card-title"><a href="{% url 'appeal_to_leader' %}" target="_blank">Rahbarlarga murojaat</a></h3>
       <p class="card-description">Taklif va shikoyatlaringizni yuboring.</p>
     </div>
     <div class="main-section__card">
-      <h1 class="card-icon"><i class="fa-regular fa-folder-open"></i></h1>
-      <h3 class="card-title"><a href="#">E-Doc</a></h3>
-      <p class="card-description">Ichki hujjat almashinuvi tizimi.</p>
+      <h1 class="card-icon"><i class="fa-solid fa-book-open-reader"></i></h1>
+      <h3 class="card-title"><a href="#" target="_blank">Elektron kutubxona</a></h3>
+      <p class="card-description">Onlayn kutubxonadan foydalanish.</p>
     </div>
     <div class="main-section__card">
       <h1 class="card-icon"><i class="fa-solid fa-circle-info"></i></h1>
-      <h3 class="card-title"><a href="#">Ma'lumotnoma olish</a></h3>
+      <h3 class="card-title"><a href="https://my.mehnat.uz/login" target="_blank">Ma'lumotnoma olish</a></h3>
       <p class="card-description">Xodimlar uchun ish joyi ma'lumotini oling.</p>
     </div>
     <div class="main-section__card">
-      <h1 class="card-icon"><i class="fa-regular fa-user"></i></h1>
-      <h3 class="card-title"><a href="#">Rahbarlarga murojaat</a></h3>
-      <p class="card-description">Taklif va shikoyatlaringizni yuboring</p>
+      <h1 class="card-icon"><i class="fa-solid fa-check-double"></i></h1>
+      <h3 class="card-title"><a href="https://student.samduuf.uz/dashboard/diploma" target="_blank">Diplomni tekshirish (Talabalar)</a></h3>
+      <p class="card-description">Talabalar uchun diplom tekshirish tizimi.</p>
     </div>
     <div class="main-section__card">
-      <h1 class="card-icon"><i class="fa-regular fa-user"></i></h1>
-      <h3 class="card-title"><a href="#">Rahbarlarga murojaat</a></h3>
-      <p class="card-description">Taklif va shikoyatlaringizni yuboring</p>
+      <h1 class="card-icon"><i class="fa-regular fa-file-lines"></i></h1>
+      <h3 class="card-title"><a href="https://student.samduuf.uz/dashboard/contract" target="_blank">Shartnoma olish (Talabalar)</a></h3>
+      <p class="card-description">Talabalar uchun shartnoma olish tizimi.</p>
     </div>
     <div class="main-section__card">
-      <h1 class="card-icon"><i class="fa-regular fa-user"></i></h1>
-      <h3 class="card-title"><a href="#">Rahbarlarga murojaat</a></h3>
-      <p class="card-description">Taklif va shikoyatlaringizni yuboring</p>
+      <h1 class="card-icon"><i class="fa-regular fa-file-lines"></i></h1>
+      <h3 class="card-title"><a href="#">Yotoqxonaga ariza berish</a></h3>
+      <p class="card-description">Yotoqxonaga online ariza berish.</p>
     </div>
   </div>
 
@@ -48,17 +48,17 @@
     <div class="statistics__cards">
       <div class="statistics-card">
         <img src="{% static 'images/Asset190.svg' %}" alt="statistics image" class="statistics-card__image">
-        <h4 class="statistics-card__number mt-4">105</h4>
+        <h4 class="statistics-card__number mt-4">{{ appeal_count }}</h4>
         <p class="statistics-card__description">Kelib tushgan murojaatlar</p>
       </div>
       <div class="statistics-card">
         <img src="{% static 'images/Asset189.svg' %}" alt="statistics image" class="statistics-card__image">
-        <h4 class="statistics-card__number mt-4">99</h4>
+        <h4 class="statistics-card__number mt-4">{{ answer_count }}</h4>
         <p class="statistics-card__description">Javob berilgan murojaatlar</p>
       </div>
       <div class="statistics-card">
         <img src="{% static 'images/Asset186.svg' %}" alt="statistics image" class="statistics-card__image">
-        <h4 class="statistics-card__number mt-4">6</h4>
+        <h4 class="statistics-card__number mt-4">{{ appeal_in_process }}</h4>
         <p class="statistics-card__description">Jarayondagi murojaatlar</p>
       </div>
       <div class="statistics-card">

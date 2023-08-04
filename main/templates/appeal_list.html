@@ -34,7 +34,6 @@
             <td>{{ appeal.student.email }}</td>
             <td>{{ appeal.student.phone }}</td>
             <td>
-                <a href="{% url 'appeal_delete' appeal.id %}"><i class="fa-solid fa-trash" style="color: red;"></i></a>
                 <a href="{% url 'appeal_detail' appeal.id %}"><i class="fa-regular fa-message ms-2" style="color: rgb(70, 119, 241)"></i></a>
             </td>
           </tr>

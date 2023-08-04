@@ -16,7 +16,15 @@ def custom_404(request, exeption):
 
 class HomePageView(View):
     def get(self, request):
-        return render(request, 'home.html')
+        appeal_count = Appeal.objects.count()
+        answer_count = Answer.objects.count()
+        appeal_in_process = appeal_count - answer_count
+        context = {
+            'appeal_count':appeal_count,
+            'answer_count':answer_count,
+            'appeal_in_process':appeal_in_process
+        }
+        return render(request, 'home.html', context)
 
 class AllServicesView(LoginRequiredMixin, View):
     def get(self, request):
@@ -55,6 +63,14 @@ class MyApplicationView(LoginRequiredMixin, View):
         }
         return render(request, 'my-application-list.html', context)
     
+class MyAnswerView(LoginRequiredMixin, View):
+    def get(self, request):
+        answers = Answer.objects.filter(student_id=request.user.username)
+        context = {
+            'answers':answers
+        }
+        return render(request, 'my-answers.html', context)
+    
     
 class AppealListDetailView(CustomLoginRequiredMixin, View):
     def get(self, request, appeal_id=None):
@@ -77,7 +93,7 @@ class AppealListDetailView(CustomLoginRequiredMixin, View):
         if form.is_valid():
             appeal = get_object_or_404(Appeal, id=appeal_id)
             form_create = form.save(commit=False)
-            form_create.leader = request.user.get_full_name
+            form_create.leader = str(request.user.first_name) + str(request.user.last_name)
             form_create.student_id = appeal.student.student_id_number
             form_create.save()
             messages.success(request, "Javob muvaffaqqiyatli saqlandi.")
@@ -88,9 +104,3 @@ class AppealListDetailView(CustomLoginRequiredMixin, View):
                 'form':form
             }
             return render(request, 'appeal_detail.html', context)
-        
-
-def deleteAppeal(request, appeal_id):
-    appeal = get_object_or_404(Appeal, id=appeal_id)
-    appeal.delete()
-    return redirect('appeal_list')

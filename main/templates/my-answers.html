@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} My Answers {% endblock %}
+
+{% block content %}
+<main class="container">
+    <div class="row">
+        {% include 'includes/left.html' %}
+        <div class="col-lg-9 mt-5 mb-5">
+            <h1 class="general-info__title">Javoblar</h1>
+            {% for ans in answers %}
+            <div class="input-group mb-3">
+                <span class="input-group-text">{{ ans.leader }}</span>
+                <textarea class="form-control" aria-label="With textarea" readonly>{{ ans.message }}</textarea>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+{% endblock %}
