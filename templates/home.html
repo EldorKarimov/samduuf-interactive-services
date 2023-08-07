@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% load static %}
 
 {% block content %}
 <main class="container">
   <div class="main-section-subtitle">
-    <h3 class="main-section-subtitle__title">Interaktiv xizmatlar</h3>
+    <h3 class="main-section-subtitle__title">
+      {% trans "Interaktiv xizmatlar" %}
+    </h3>
     <p class="main-section-subtitle__description">Quyidagi <span class="description-span">interaktiv xizmatlar</span>
       bilan siz bizning xizmatlarimizdan masofadan turib <br>
       foydalanishingiz mumkin.</p>

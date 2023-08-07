@@ -26,6 +26,7 @@ class HomePageView(View):
             'appeal_in_process':appeal_in_process
         }
         return render(request, 'home.html', context)
+    
 
 class AllServicesView(LoginRequiredMixin, View):
     def get(self, request):
@@ -34,8 +35,10 @@ class AllServicesView(LoginRequiredMixin, View):
 class AppealToLeaderView(LoginRequiredMixin, View):
     def get(self, request):
         form = AppealForm()
+        leaders = Leader.objects.all()
         context = {
-            'form':form
+            'form':form,
+            'leaders':leaders
         }
         return render(request, 'appeal-to-leader.html', context)
     

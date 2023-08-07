@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import FileExtensionValidator
+from django.utils.translation import gettext_lazy as _
 
 from accounts.models import Student
 
@@ -7,10 +8,18 @@ class Leader(models.Model):
     leader = models.OneToOneField(Student, on_delete=models.PROTECT)
     image = models.ImageField(upload_to='media/leader/image')
     phone = models.CharField(max_length=13)
-    position = models.CharField(max_length=128)
+    position = models.CharField(verbose_name=_('Position'), max_length=128)
+    detail_link = models.TextField()
+
+    class Meta:
+        verbose_name_plural = _('Leaders')
 
     def __str__(self):
         return f"{self.leader.first_name} {self.leader.last_name}"
+    
+    def get_full_name(self):
+        return f"{leader.leader.first_name} {leader.leader.last_name} {leader.leader.third_name}"
+    
 
 class Appeal(models.Model):
     TYPE_APPLICATION = (

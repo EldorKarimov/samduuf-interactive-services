@@ -1,3 +1,4 @@
+{% load i18n %}
 <!-- Header  -->
 <div class="top">
     <nav>
@@ -25,22 +26,22 @@
                 <li class="p-2"><a href="https://student.samduuf.uz/">Hemis student</a></li>
                 <li class="p-2"><a href="https://hemis.samduuf.uz/">Hemis OTM</a></li>
                 <li class="p-2">
-                    <div class="dropdown">
-                        <button class="btn p-0 btn-sm btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            O&#039;zbek
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item border-bottom" href="/ru"> <img width="20px"
-                                        src="https://samduuf.uz/frontend/img/icon/ru.svg" alt="111"> Русский</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item border-bottom" href="/en"> <img width="20px"
-                                        src="https://samduuf.uz/frontend/img/icon/gb.svg" alt="111">English</a>
-                            </li>
-                        </ul>
-                    </div>
+                    
+                    
+                        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}">
+                            <select name="language">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                        {{ language.name_local }} ({{ language.code }})
+                                    </option>
+                                {% endfor %}
+                            </select>
+                            <input type="submit" value="Go">
+                        </form>
                 </li>
             </ul>
         </div>
@@ -63,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent1">
                 <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'home' %}">Bosh sahifa</a>
+                        <a class="nav-link" href="{% url 'home' %}">{% trans "Bosh sahifa" %}</a>
                     </li>
 
 
@@ -94,10 +95,11 @@
                         <a class="nav-link" href="#">Biz haqimizda</a>
                     </li>
 
-
                     <li class="nav-item">
                         <a class="nav-link" href="#">Bog&#039;lanish</a>
                     </li>
+
+
                     {% if user.is_authenticated %}
                     <li class="nav-item nav-item__login">
                         <a href="#">{{ request.user.first_name }} {{ request.user.last_name }}</a>

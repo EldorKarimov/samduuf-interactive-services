@@ -16,50 +16,20 @@
             <h1 class="general-info__title">Rahbariyatga Murojaat</h1>
             <div class="appeal-leaders">
                 <div class="row">
+                    {% for leader in leaders %}
                     <div class="col-lg-6">
                         <div class="appeal-leaders__card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-                            <img src="https://www.samduuf.uz/lfm/photos/4/xodimlar%20rasmi/471787987.jpg" alt="Rasm">
+                            <img src="{{ leader.image.url }}" alt="Rasm">
                             <div class="appeal-leaders__details">
-                                <h2 class="appeal-leaders__full-name">Yarashev Quvondiq Safarovich</h2>
-                                <p class="appeal-leaders__position">Samdu Urgut filiali direktori</p>
-                                <p><i class="fa-solid fa-phone-volume"></i> +998999999999</p>
-                                <a href="https://www.samduuf.uz/uz/page/branch-director-28-12-2022">Batafsil</a>
+                                <h2 class="appeal-leaders__full-name">{{ leader.leader.get_full_name }}</h2>
+                                <p class="appeal-leaders__position">{{ leader.position }}</p>
+                                <p><i class="fa-solid fa-phone-volume"></i>{{ leader.phone }}</p>
+                                <a href="{{ leader.detail_link }}">Batafsil</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="appeal-leaders__card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-                            <img src="images/download.jpg" alt="Rasm">
-                            <div class="appeal-leaders__details">
-                                <h2 class="appeal-leaders__full-name">Raxmanov Ismoil Usmanovich</h2>
-                                <p class="appeal-leaders__position">Ishlar boshqarmasi boshlig'i</p>
-                                <p><i class="fa-solid fa-phone-volume"></i> 93 721 41 00</p>
-                                <a href="#">Batafsil</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="appeal-leaders__card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-                            <img src="images/download.jpg" alt="Rasm">
-                            <div class="appeal-leaders__details">
-                                <h2 class="appeal-leaders__full-name">Raxmanov Ismoil Usmanovich</h2>
-                                <p class="appeal-leaders__position">Ishlar boshqarmasi boshlig'i</p>
-                                <p><i class="fa-solid fa-phone-volume"></i> 93 721 41 00</p>
-                                <a href="#">Batafsil</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="appeal-leaders__card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-                            <img src="images/download.jpg" alt="Rasm">
-                            <div class="appeal-leaders__details">
-                                <h2 class="appeal-leaders__full-name">Raxmanov Ismoil Usmanovich</h2>
-                                <p class="appeal-leaders__position">Ishlar boshqarmasi boshlig'i</p>
-                                <p><i class="fa-solid fa-phone-volume"></i> 93 721 41 00</p>
-                                <a href="#">Batafsil</a>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+                    
                 </div>
             </div>
             <div class="appeal-leaders-form" style="border: 1px solid #d5cccc; padding: 20px; border-radius: 5px;">
