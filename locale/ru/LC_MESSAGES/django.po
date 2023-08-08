@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-08 11:21+0500\n"
+"POT-Creation-Date: 2023-08-08 11:48+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,6 +39,75 @@ msgstr "Позиция"
 #: .\main\models.py:15
 msgid "Leaders"
 msgstr "Лидеры"
+
+#: .\main\templates\all-services.html:10 .\templates\includes\left.html:7
+msgid "Barcha xizmatlar"
+msgstr "Все услуги"
+
+#: .\main\templates\all-services.html:16
+msgid "Rahbariyatga ariza yuborish"
+msgstr "Отправить заявку руководству"
+
+#: .\main\templates\all-services.html:17 .\main\templates\all-services.html:24
+msgid "batafsil"
+msgstr "читать далее"
+
+#: .\main\templates\all-services.html:23
+msgid "Talabalar turar joyiga ariza berish"
+msgstr "Подать заявку на студенческое общежитие"
+
+#: .\main\templates\appeal_detail.html:7 .\main\templates\appeal_detail.html:57
+#: .\main\templates\appeal_detail.html:63
+msgid "Javob yozish"
+msgstr "Напишите ответ"
+
+#: .\main\templates\appeal_detail.html:11
+msgid "F.I.SH"
+msgstr "Ф.И.О"
+
+#: .\main\templates\appeal_detail.html:15
+msgid "Yo'nalishi"
+msgstr "Направление"
+
+#: .\main\templates\appeal_detail.html:19
+msgid "Elektron pochta"
+msgstr "Электронная почта"
+
+#: .\main\templates\appeal_detail.html:23
+msgid "Murojaat turi"
+msgstr "Тип заявления"
+
+#: .\main\templates\appeal_detail.html:27
+msgid "Murojaat matni"
+msgstr "Текст заявки"
+
+#: .\main\templates\appeal_detail.html:34
+msgid "Fakulteti"
+msgstr "Факультет"
+
+#: .\main\templates\appeal_detail.html:38
+msgid "Guruhi"
+msgstr "Группа"
+
+#: .\main\templates\appeal_detail.html:42
+msgid "Telefon raqam"
+msgstr "Номер телефона"
+
+#: .\main\templates\appeal_detail.html:46
+msgid "Murojaat mavzusi"
+msgstr "Предмет заявки"
+
+#: .\main\templates\appeal_detail.html:50
+msgid "Fayl"
+msgstr "Файл"
+
+#: .\main\templates\appeal_detail.html:52
+msgid "Faylni yuklash"
+msgstr "Загрузить файл"
+
+#: .\main\templates\appeal_detail.html:67
+msgid "Yuborish"
+msgstr "Отправка"
 
 #: .\templates\home.html:10 .\templates\home.html:50
 #: .\templates\includes\left.html:5
@@ -131,8 +200,9 @@ msgstr "Другой"
 
 #: .\templates\includes\header.html:56
 msgid "Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali"
-msgstr "Ургутский филиал Самаркандского государственного университета имени Шарофа Рашидова"
-
+msgstr ""
+"Ургутский филиал Самаркандского государственного университета имени Шарофа "
+"Рашидова"
 
 #: .\templates\includes\header.html:67
 msgid "Bosh sahifa"
@@ -165,10 +235,6 @@ msgstr "Связь"
 #: .\templates\includes\header.html:109
 msgid "Tizimga kirish"
 msgstr "Авторизоваться"
-
-#: .\templates\includes\left.html:7
-msgid "Barcha xizmatlar"
-msgstr "Все услуги"
 
 #: .\templates\includes\left.html:8
 msgid "Mening murojaatlarim"

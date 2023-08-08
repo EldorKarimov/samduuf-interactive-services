@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block content %}
 <main class="container">
@@ -6,21 +7,21 @@
          {% include 'includes/left.html' %}
          <div class="col-lg-9 mt-5 mb-5" style="border: 1px solid rgb(230, 224, 224); border-radius: 5px;">
              <div class="services-list">
-                 <h1 class="general-info__title">Barcha xizmatlar</h1>
+                 <h1 class="general-info__title">{% trans "Barcha xizmatlar" %}</h1>
              </div>
              <div class="services-list__cards">
                  <a href="{% url 'appeal_to_leader' %}">
                      <div class="services-list__card">
                          <i class="fa-solid fa-pen-to-square"></i>
-                         <h3 class="services-list__title">Rahbariyatga ariza yuborish</h3>
-                         <a href="{% url 'appeal_to_leader' %}" class="services-list__link">batafsil</a>
+                         <h3 class="services-list__title">{% trans "Rahbariyatga ariza yuborish" %}</h3>
+                         <a href="{% url 'appeal_to_leader' %}" class="services-list__link">{% trans "batafsil" %}</a>
                      </div>
                  </a>
                  <a href="#">
                      <div class="services-list__card">
                         <i class="fa-regular fa-building"></i>
-                         <h3 class="services-list__title">Talabalar turar joyiga ariza berish</h3>
-                         <a href="#" class="services-list__link">batafsil</a>
+                         <h3 class="services-list__title">{% trans "Talabalar turar joyiga ariza berish" %}</h3>
+                         <a href="#" class="services-list__link">{% trans "batafsil" %}</a>
                      </div>
                  </a>
              </div>

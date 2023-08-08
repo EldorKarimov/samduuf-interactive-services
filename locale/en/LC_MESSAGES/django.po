@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-08 10:22+0500\n"
+"POT-Creation-Date: 2023-08-08 11:41+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,6 +26,10 @@ msgstr "Uzbek"
 msgid "English"
 msgstr "English"
 
+#: .\config\settings.py:131
+msgid "Russian"
+msgstr ""
+
 #: .\main\models.py:11
 msgid "Position"
 msgstr "Pozitsiya"
@@ -34,8 +38,77 @@ msgstr "Pozitsiya"
 msgid "Leaders"
 msgstr "Boshliqlar"
 
+#: .\main\templates\all-services.html:10 .\templates\includes\left.html:7
+msgid "Barcha xizmatlar"
+msgstr "All services"
+
+#: .\main\templates\all-services.html:16
+msgid "Rahbariyatga ariza yuborish"
+msgstr "Send an application to the management"
+
+#: .\main\templates\all-services.html:17 .\main\templates\all-services.html:24
+msgid "batafsil"
+msgstr "read more"
+
+#: .\main\templates\all-services.html:23
+msgid "Talabalar turar joyiga ariza berish"
+msgstr "Apply for student accommodation"
+
+#: .\main\templates\appeal_detail.html:7 .\main\templates\appeal_detail.html:57
+#: .\main\templates\appeal_detail.html:63
+msgid "Javob yozish"
+msgstr "Write an answer"
+
+#: .\main\templates\appeal_detail.html:11
+msgid "F.I.SH"
+msgstr "Full Name"
+
+#: .\main\templates\appeal_detail.html:15
+msgid "Yo'nalishi"
+msgstr "Direction"
+
+#: .\main\templates\appeal_detail.html:19
+msgid "Elektron pochta"
+msgstr "Email"
+
+#: .\main\templates\appeal_detail.html:23
+msgid "Murojaat turi"
+msgstr "Type of application"
+
+#: .\main\templates\appeal_detail.html:27
+msgid "Murojaat matni"
+msgstr "The text of the application"
+
+#: .\main\templates\appeal_detail.html:34
+msgid "Fakulteti"
+msgstr "Faculty"
+
+#: .\main\templates\appeal_detail.html:38
+msgid "Guruhi"
+msgstr "Group"
+
+#: .\main\templates\appeal_detail.html:42
+msgid "Telefon raqam"
+msgstr "Phone"
+
+#: .\main\templates\appeal_detail.html:46
+msgid "Murojaat mavzusi"
+msgstr "Subject of application"
+
+#: .\main\templates\appeal_detail.html:50
+msgid "Fayl"
+msgstr "File"
+
+#: .\main\templates\appeal_detail.html:52
+msgid "Faylni yuklash"
+msgstr "Download file"
+
+#: .\main\templates\appeal_detail.html:67
+msgid "Yuborish"
+msgstr "Send"
+
 #: .\templates\home.html:10 .\templates\home.html:50
-#: .\templates\includes\left.html:4
+#: .\templates\includes\left.html:5
 msgid "Interaktiv xizmatlar"
 msgstr "Interactive services"
 
@@ -159,31 +232,27 @@ msgstr "Connection"
 msgid "Tizimga kirish"
 msgstr "Sign in"
 
-#: .\templates\includes\left.html:6
-msgid "Barcha xizmatlar"
-msgstr "All services"
-
-#: .\templates\includes\left.html:7
+#: .\templates\includes\left.html:8
 msgid "Mening murojaatlarim"
 msgstr "My appeals"
 
-#: .\templates\includes\left.html:8
+#: .\templates\includes\left.html:9
 msgid "Javoblarni ko'rish"
 msgstr "View answers"
 
-#: .\templates\includes\left.html:10
+#: .\templates\includes\left.html:11
 msgid "Mening ma'lumotlarim"
 msgstr "My information"
 
-#: .\templates\includes\left.html:12
+#: .\templates\includes\left.html:13
 msgid "Umumiy ma'lumotlar"
 msgstr "General information"
 
-#: .\templates\includes\left.html:14
+#: .\templates\includes\left.html:15
 msgid "Ta'lim ma'lumotlari"
 msgstr "Educational information"
 
-#: .\templates\includes\left.html:15
+#: .\templates\includes\left.html:16
 msgid "Tizimdan chiqish"
 msgstr "Sign out"
 
