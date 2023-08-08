@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-08 10:22+0500\n"
+"POT-Creation-Date: 2023-08-08 11:21+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: .\config\settings.py:129
 msgid "Uzbek"
@@ -26,166 +28,171 @@ msgstr "Uzbek"
 msgid "English"
 msgstr "English"
 
+#: .\config\settings.py:131
+msgid "Russian"
+msgstr ""
+
 #: .\main\models.py:11
 msgid "Position"
-msgstr "Pozitsiya"
+msgstr "Позиция"
 
 #: .\main\models.py:15
 msgid "Leaders"
-msgstr "Boshliqlar"
+msgstr "Лидеры"
 
 #: .\templates\home.html:10 .\templates\home.html:50
-#: .\templates\includes\left.html:4
+#: .\templates\includes\left.html:5
 msgid "Interaktiv xizmatlar"
-msgstr "Interactive services"
+msgstr "Интерактивные услуги"
 
 #: .\templates\home.html:12
 msgid "Quyidagi"
-msgstr "the following"
+msgstr "Следующее"
 
 #: .\templates\home.html:12
 msgid "interaktiv xizmatlar"
-msgstr "Interactive services"
+msgstr "Интерактивные услуги"
 
 #: .\templates\home.html:13
 msgid "bilan siz bizning xizmatlarimizdan masofadan turib"
-msgstr "with you remotely from our services"
+msgstr "с вами удаленно из наших сервисов"
 
 #: .\templates\home.html:14
 msgid "foydalanishingiz mumkin."
-msgstr "you can use."
+msgstr "вы можете использовать."
 
 #: .\templates\home.html:19 .\templates\includes\header.html:80
 msgid "Rahbarlarga Murojaat"
-msgstr "Appeal to leaders"
+msgstr "Обращение к лидерам"
 
 #: .\templates\home.html:20
 msgid "Taklif va shikoyatlaringizni yuboring"
-msgstr "Submit your suggestions and complaints"
+msgstr "Оставляйте свои предложения и жалобы"
 
 #: .\templates\home.html:24
 msgid "Elektron kutubxona"
-msgstr "Electronic library"
+msgstr "Электронная библиотека"
 
 #: .\templates\home.html:25
 msgid "Onlayn kutubxonadan foydalanish"
-msgstr "Using the online library"
+msgstr "Использование онлайн-библиотеки"
 
 #: .\templates\home.html:29
 msgid "Ma'lumotnoma olish"
-msgstr "Get a reference"
+msgstr "Получить ссылку"
 
 #: .\templates\home.html:30
 msgid "Xodimlar uchun ish joyi ma'lumotini oling"
-msgstr "Get job location information for employees"
+msgstr "Получить информацию о местонахождении работы для сотрудников"
 
 #: .\templates\home.html:34
 msgid "Diplomni tekshirish (Talabalar)"
-msgstr "Diploma Verification (Students)"
+msgstr "Проверка диплома (студенты)"
 
 #: .\templates\home.html:35
 msgid "Talabalar uchun diplom tekshirish tizimi"
-msgstr "Diploma verification system for students"
+msgstr "Система проверки диплома для студентов"
 
 #: .\templates\home.html:39
 msgid "Shartnoma olish (Talabalar)"
-msgstr "Get a contract (Students)"
+msgstr "Получить контракт (Студенты)"
 
 #: .\templates\home.html:40
 msgid "Talabalar uchun shartnoma olish tizimi"
-msgstr "System for obtaining a contract for students"
+msgstr "Система получения контракта для студентов"
 
 #: .\templates\home.html:44
 msgid "Yotoqxonaga ariza berish"
-msgstr "Apply for a dormitory"
+msgstr "Подать заявку на общежитие"
 
 #: .\templates\home.html:45
 msgid "Yotoqxonaga online ariza berish"
-msgstr "Apply for a dormitory online"
+msgstr "Подать заявку на общежитие онлайн"
 
 #: .\templates\home.html:50
 msgid "Statistikasi"
-msgstr "Statistics"
+msgstr "Статистика"
 
 #: .\templates\home.html:55
 msgid "Kelib tushgan murojaatlar"
-msgstr "Incoming appeals"
+msgstr "Входящие обращения"
 
 #: .\templates\home.html:60
 msgid "Javob berilgan murojaatlar"
-msgstr "Answered appeals"
+msgstr "Ответы на обращения"
 
 #: .\templates\home.html:65
 msgid "Jarayondagi murojaatlar"
-msgstr "Appeals in progress"
+msgstr "Рассмотрение апелляций"
 
 #: .\templates\home.html:70
 msgid "Boshqa"
-msgstr "Another"
+msgstr "Другой"
 
 #: .\templates\includes\header.html:56
 msgid "Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali"
-msgstr "Urgut branch of Samarkand State University named after Sharof Rashidov"
+msgstr "Ургутский филиал Самаркандского государственного университета имени Шарофа Рашидова"
+
 
 #: .\templates\includes\header.html:67
 msgid "Bosh sahifa"
-msgstr "Homepage"
+msgstr "Домашняя страница"
 
 #: .\templates\includes\header.html:72
 msgid "Interaktiv Xizmatlar "
-msgstr "Interactive services"
+msgstr "Интерактивные услуги"
 
 #: .\templates\includes\header.html:83
 msgid "Dimlomni tekshirish (talabalar)"
-msgstr "Diploma Check (Students)"
+msgstr "Проверка диплома (студенты)"
 
 #: .\templates\includes\header.html:86
 msgid "Shartnoma olish"
-msgstr "Get a contract"
+msgstr "Получить контракт"
 
 #: .\templates\includes\header.html:89
 msgid "Ma&#039;lumotnoma olish"
-msgstr "Get a reference"
+msgstr "Получить ссылку"
 
 #: .\templates\includes\header.html:95
 msgid "Biz haqimizda"
-msgstr "About us"
+msgstr "о нас"
 
 #: .\templates\includes\header.html:99
 msgid "Bog&#039;lanish"
-msgstr "Connection"
+msgstr "Связь"
 
 #: .\templates\includes\header.html:109
 msgid "Tizimga kirish"
-msgstr "Sign in"
-
-#: .\templates\includes\left.html:6
-msgid "Barcha xizmatlar"
-msgstr "All services"
+msgstr "Авторизоваться"
 
 #: .\templates\includes\left.html:7
-msgid "Mening murojaatlarim"
-msgstr "My appeals"
+msgid "Barcha xizmatlar"
+msgstr "Все услуги"
 
 #: .\templates\includes\left.html:8
+msgid "Mening murojaatlarim"
+msgstr "Мои обращения"
+
+#: .\templates\includes\left.html:9
 msgid "Javoblarni ko'rish"
-msgstr "View answers"
+msgstr "Посмотреть ответы"
 
-#: .\templates\includes\left.html:10
+#: .\templates\includes\left.html:11
 msgid "Mening ma'lumotlarim"
-msgstr "My information"
+msgstr "Моя информация"
 
-#: .\templates\includes\left.html:12
+#: .\templates\includes\left.html:13
 msgid "Umumiy ma'lumotlar"
-msgstr "General information"
-
-#: .\templates\includes\left.html:14
-msgid "Ta'lim ma'lumotlari"
-msgstr "Educational information"
+msgstr "Общая информация"
 
 #: .\templates\includes\left.html:15
+msgid "Ta'lim ma'lumotlari"
+msgstr "Образовательная информация"
+
+#: .\templates\includes\left.html:16
 msgid "Tizimdan chiqish"
-msgstr "Sign out"
+msgstr "выход"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:15
 msgid "Messages"

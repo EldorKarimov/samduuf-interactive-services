@@ -128,11 +128,14 @@ from django.utils.translation import gettext_lazy as _
 LANGUAGES = [
     ("uz", _("Uzbek")),
     ("en", _("English")),
+    ("ru", _("Russian")),
 ]
 
 LOCALE_PATHS = (
     BASE_DIR / 'locale',
 )
+
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'uz'
 
 
 # Static files (CSS, JavaScript, Images)

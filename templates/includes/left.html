@@ -1,18 +1,18 @@
+{% load i18n %}
 <div class="col-lg-3 mt-5 mb-5">
     <div class="section-left">
         <h5 class="section-left__title">
-            Interaktiv xizmatlar
+            {% trans "Interaktiv xizmatlar" %}
         </h5> <hr class="section-left__line">
-        <p class="section-left__item"><a href="{% url 'all_services' %}"><i class="fa-solid fa-bars"></i>Barcha xizmatlar</a></p> <hr class="section-left__line">
-        <p class="section-left__item"><a href="{% url 'application_list' %}"><i class="fa-solid fa-check-double"></i>Mening murojaatlarim</a></p> <hr class="section-left__line">
-        <p class="section-left__item"><a href="{% url 'my_answers' %}"><i class="fa-regular fa-square-check"></i>Javoblarni ko'rish</a></p>
+        <p class="section-left__item"><a href="{% url 'all_services' %}"><i class="fa-solid fa-bars"></i>{% trans "Barcha xizmatlar" %}</a></p> <hr class="section-left__line">
+        <p class="section-left__item"><a href="{% url 'application_list' %}"><i class="fa-solid fa-check-double"></i>{% trans "Mening murojaatlarim" %}</a></p> <hr class="section-left__line">
+        <p class="section-left__item"><a href="{% url 'my_answers' %}"><i class="fa-regular fa-square-check"></i>{% trans "Javoblarni ko'rish" %}</a></p>
         <h5 class="section-left__title">
-            Mening ma'lumotlarim
+            {% trans "Mening ma'lumotlarim" %}
         </h5> <hr class="section-left__line">
-        <p class="section-left__item"><a href="{% url 'profile_data' %}"><i class="fa-solid fa-info"></i>Umumiy ma'lumotlar</a></p> <hr class="section-left__line">
+        <p class="section-left__item"><a href="{% url 'profile_data' %}"><i class="fa-solid fa-info"></i>{% trans "Umumiy ma'lumotlar" %}</a></p> <hr class="section-left__line">
         <!-- <p class="section-left__item"><i class="fa-regular fa-id-card"></i><a href="#">Pasport ma'lumotlari</a></p> <hr class="section-left__line"> -->
-        <p class="section-left__item"><a href="{% url 'edu_data' %}"><i class="fa-solid fa-graduation-cap"></i>Ta'lim ma'lumotlari</a></p> <hr class="section-left__line">
-        <p class="section-left__item"><a href="{% url 'logout' %}"><i class="fa-solid fa-right-to-bracket"></i>Tizimdan chiqish</a></p>
-
+        <p class="section-left__item"><a href="{% url 'edu_data' %}"><i class="fa-solid fa-graduation-cap"></i>{% trans "Ta'lim ma'lumotlari" %}</a></p> <hr class="section-left__line">
+        <p class="section-left__item"><a href="{% url 'logout' %}"><i class="fa-solid fa-right-to-bracket"></i>{% trans "Tizimdan chiqish" %}</a></p>
     </div>
 </div>

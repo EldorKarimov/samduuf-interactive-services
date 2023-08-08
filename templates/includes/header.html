@@ -53,7 +53,7 @@
             <a class="navbar-brand p-0 d-flex align-items-center" href="/">
                 <img width="70px" src="https://samduuf.uz/frontend/img/Logo/Logo.png" alt="logo">
                 <h2 class="d-none d-lg-block mb-0 ">
-                    <p class="mb-0 ms-2 ">Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali</p>
+                    <p class="mb-0 ms-2 ">{% trans "Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali" %}</p>
                 </h2>
             </a>
             <button id="callapse" class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -69,7 +69,7 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'all_services' %}">Interaktiv Xizmatlar
+                        <a class="nav-link" href="{% url 'all_services' %}">{% trans "Interaktiv Xizmatlar "%}
                             <svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                 <path
                                     d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
@@ -77,26 +77,26 @@
                         </a>
                         <ul class="drop-down px-0 py-2">
                             <li class="px-3"><a
-                                    href="{% url 'appeal_to_leader' %}">Rahbarlarga Murojaat</a>
+                                    href="{% url 'appeal_to_leader' %}">{% trans "Rahbarlarga Murojaat" %}</a>
                             </li>
                             <li class="px-3"><a
-                                href="https://student.samduuf.uz/dashboard/diploma" target="_blank">Dimlomni tekshirish (talabalar)</a>
+                                href="https://student.samduuf.uz/dashboard/diploma" target="_blank">{% trans "Dimlomni tekshirish (talabalar)" %}</a>
                             </li>
                             <li class="px-3"><a
-                                href="https://student.samduuf.uz/dashboard/contract" target="_blank">Shartnoma olish</a>
+                                href="https://student.samduuf.uz/dashboard/contract" target="_blank">{% trans "Shartnoma olish" %}</a>
                             </li>
                             <li class="px-3"><a
-                                href="https://my.mehnat.uz/login" target="_blank">Ma&#039;lumotnoma olish</a>
+                                href="https://my.mehnat.uz/login" target="_blank">{% trans "Ma&#039;lumotnoma olish" %}</a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Biz haqimizda</a>
+                        <a class="nav-link" href="#">{% trans "Biz haqimizda" %}</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Bog&#039;lanish</a>
+                        <a class="nav-link" href="#">{% trans "Bog&#039;lanish" %}</a>
                     </li>
 
 
@@ -106,7 +106,7 @@
                     </li>
                     {% else %}
                     <li class="nav-item nav-item__login">
-                        <a href="{% url 'login' %}" class="btn btn-outline-primary"> <i class="fa-solid fa-arrow-right-to-bracket"></i> Tizimga kirish</a>
+                        <a href="{% url 'login' %}" class="btn btn-outline-primary"> <i class="fa-solid fa-arrow-right-to-bracket"></i>{% trans "Tizimga kirish" %}</a>
                     </li>
                     {% endif %}
 
