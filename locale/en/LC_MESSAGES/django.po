@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-08 11:41+0500\n"
+"POT-Creation-Date: 2023-08-08 15:01+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,12 +54,58 @@ msgstr "read more"
 msgid "Talabalar turar joyiga ariza berish"
 msgstr "Apply for student accommodation"
 
+#: .\main\templates\appeal-to-leader.html:16
+
+msgid "Rahbariyatga Murojaat"
+msgstr "Appeal to leaders"
+
+#: .\main\templates\appeal-to-leader.html:27
+
+msgid "Batafsil"
+msgstr "read more"
+
+#: .\main\templates\appeal-to-leader.html:41
+#: .\main\templates\appeal_detail.html:23
+msgid "Murojaat turi"
+msgstr "Type of application"
+
+#: .\main\templates\appeal-to-leader.html:51
+msgid "Rahbariyat"
+msgstr ""
+
+#: .\main\templates\appeal-to-leader.html:69 .\main\templates\appeal.html:52
+
+msgid "Fayl yuklash"
+msgstr "Download file"
+
+#: .\main\templates\appeal-to-leader.html:75
+
+msgid "Xabar matni"
+msgstr "The text of the application"
+
+#: .\main\templates\appeal-to-leader.html:82
+msgid "Qonun talablari doirasida shaxsga doir maʼlumotlarimdan foydalanishga rozilik bildiraman"
+msgstr "I agree to the use of my personal data as required by law"
+
+#: .\main\templates\appeal-to-leader.html:87 .\main\templates\appeal.html:61
+#: .\main\templates\appeal_detail.html:67
+msgid "Yuborish"
+msgstr "Send"
+
+#: .\main\templates\appeal.html:20 .\main\templates\appeal.html:43
+msgid "Murojaat yo'llash"
+msgstr "Subject of application"
+
+#: .\main\templates\appeal.html:33
+msgid "O'qituvchi tanlash"
+msgstr "Choosing a teacher"
+
 #: .\main\templates\appeal_detail.html:7 .\main\templates\appeal_detail.html:57
 #: .\main\templates\appeal_detail.html:63
 msgid "Javob yozish"
 msgstr "Write an answer"
 
-#: .\main\templates\appeal_detail.html:11
+#: .\main\templates\appeal_detail.html:11 .\main\templates\appeal_list.html:18
 msgid "F.I.SH"
 msgstr "Full Name"
 
@@ -67,13 +113,9 @@ msgstr "Full Name"
 msgid "Yo'nalishi"
 msgstr "Direction"
 
-#: .\main\templates\appeal_detail.html:19
+#: .\main\templates\appeal_detail.html:19 .\main\templates\appeal_list.html:22
 msgid "Elektron pochta"
 msgstr "Email"
-
-#: .\main\templates\appeal_detail.html:23
-msgid "Murojaat turi"
-msgstr "Type of application"
 
 #: .\main\templates\appeal_detail.html:27
 msgid "Murojaat matni"
@@ -103,9 +145,59 @@ msgstr "File"
 msgid "Faylni yuklash"
 msgstr "Download file"
 
-#: .\main\templates\appeal_detail.html:67
-msgid "Yuborish"
-msgstr "Send"
+#: .\main\templates\appeal_list.html:19
+msgid "Fakultet"
+msgstr "Faculty"
+
+#: .\main\templates\appeal_list.html:20
+msgid "Yo'nalish"
+msgstr "Direction"
+
+#: .\main\templates\appeal_list.html:21
+msgid "Guruh"
+msgstr "Group"
+
+#: .\main\templates\appeal_list.html:23
+msgid "Telefon"
+msgstr "Phone"
+
+#: .\main\templates\appeal_list.html:24
+msgid "Harakat"
+msgstr "Action"
+
+#: .\main\templates\appeal_list.html:47 .\main\templates\appeal_list.html:51
+msgid "Oldingi"
+msgstr "Previous"
+
+#: .\main\templates\appeal_list.html:60 .\main\templates\appeal_list.html:64
+msgid "Keyingi"
+msgstr "Next"
+
+#: .\main\templates\my-answers.html:10
+msgid "Javoblar"
+msgstr "View answers"
+
+#: .\main\templates\my-application-list.html:11
+#: .\main\templates\my-application-list.html:13
+#: .\templates\includes\left.html:8
+msgid "Mening murojaatlarim"
+msgstr "My appeals"
+
+#: .\main\templates\my-application-list.html:16
+msgid "Ariza turi"
+msgstr "Type of application"
+
+#: .\main\templates\my-application-list.html:17
+msgid "Ariza mavzusi"
+msgstr "Subject of application"
+
+#: .\main\templates\my-application-list.html:18
+msgid "Kimga"
+msgstr "To whom"
+
+#: .\main\templates\my-application-list.html:19
+msgid "Yuborilgan vaqti"
+msgstr "Sent time"
 
 #: .\templates\home.html:10 .\templates\home.html:50
 #: .\templates\includes\left.html:5
@@ -231,10 +323,6 @@ msgstr "Connection"
 #: .\templates\includes\header.html:109
 msgid "Tizimga kirish"
 msgstr "Sign in"
-
-#: .\templates\includes\left.html:8
-msgid "Mening murojaatlarim"
-msgstr "My appeals"
 
 #: .\templates\includes\left.html:9
 msgid "Javoblarni ko'rish"

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
+{% load i18n %}
 
 {% block title %} Create Appeal {% endblock %}
 
@@ -17,7 +18,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Murojaat yo'llash</h4>
+                                <h4 class="mb-sm-0">{% trans "Murojaat yo'llash" %}</h4>
                             </div>
                         </div>
                     </div>
@@ -30,7 +31,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="mb-3">
-                                            <label class="form-label" for="product-title-input">O'qituvchi tanlash</label>
+                                            <label class="form-label" for="product-title-input">{% trans "O'qituvchi tanlash" %}</label>
                                             <!-- <select class="form-select" multiple aria-label="multiple select example">
                                                 <option selected>Open this select menu</option>
                                                 <option value="1">One</option>
@@ -40,7 +41,7 @@
                                             {% render_field form.leader class+="form-select" %}
                                         </div>
                                         <div>
-                                            <label>Murojaat yo'llash</label>
+                                            <label>{% trans "Murojaat yo'llash" %}</label>
 
                                             <div class="mb-3">
                                                 <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea> -->
@@ -49,7 +50,7 @@
                                         </div>
 
                                         <div>
-                                            <label for="formFileLg" class="form-label">Fayl yuklash</label>
+                                            <label for="formFileLg" class="form-label">{% trans "Fayl yuklash" %}</label>
                                             <!-- <input class="form-control form-control-lg" id="formFileLg" type="file"> -->
                                             {% render_field form.file_upload class+="form-control form-control-lg" id="formFileLg" type="file" %}
 
@@ -58,7 +59,7 @@
                                 </div>
                                 
                                 <div class="text-end mb-3">
-                                    <button type="submit" class="btn btn-success w-sm">Submit</button>
+                                    <button type="submit" class="btn btn-success w-sm">{% trans "Yuborish" %}</button>
                                 </div>
                             </div>
                             <!-- end col -->
@@ -74,21 +75,6 @@
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
-
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Velzon.
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
         </div>
         <!-- end main content-->
 {% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-08 11:48+0500\n"
+"POT-Creation-Date: 2023-08-08 15:10+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,12 +56,54 @@ msgstr "читать далее"
 msgid "Talabalar turar joyiga ariza berish"
 msgstr "Подать заявку на студенческое общежитие"
 
+#: .\main\templates\appeal-to-leader.html:17
+msgid "Rahbariyatga Murojaat"
+msgstr "Обращение к лидерам"
+
+#: .\main\templates\appeal-to-leader.html:28
+msgid "Batafsil"
+msgstr "читать далее"
+
+#: .\main\templates\appeal-to-leader.html:42
+#: .\main\templates\appeal_detail.html:23
+msgid "Murojaat turi"
+msgstr "Тип заявления"
+
+#: .\main\templates\appeal-to-leader.html:52
+msgid "Rahbariyat"
+msgstr "Лидерство"
+
+#: .\main\templates\appeal-to-leader.html:70 .\main\templates\appeal.html:53
+msgid "Fayl yuklash"
+msgstr "Загрузить файл"
+
+#: .\main\templates\appeal-to-leader.html:76
+msgid "Xabar matni"
+msgstr "Текст заявки"
+
+#: .\main\templates\appeal-to-leader.html:83
+msgid "Qonun talablari doirasida shaxsga doir maʼlumotlarimdan foydalanishga rozilik bildiraman"
+msgstr "Я согласен на использование моих персональных данных в соответствии с требованиями закона"
+
+#: .\main\templates\appeal-to-leader.html:88 .\main\templates\appeal.html:62
+#: .\main\templates\appeal_detail.html:67
+msgid "Yuborish"
+msgstr "Отправка"
+
+#: .\main\templates\appeal.html:21 .\main\templates\appeal.html:44
+msgid "Murojaat yo'llash"
+msgstr "Предмет заявки"
+
+#: .\main\templates\appeal.html:34
+msgid "O'qituvchi tanlash"
+msgstr "Выбор учителя"
+
 #: .\main\templates\appeal_detail.html:7 .\main\templates\appeal_detail.html:57
 #: .\main\templates\appeal_detail.html:63
 msgid "Javob yozish"
 msgstr "Напишите ответ"
 
-#: .\main\templates\appeal_detail.html:11
+#: .\main\templates\appeal_detail.html:11 .\main\templates\appeal_list.html:19
 msgid "F.I.SH"
 msgstr "Ф.И.О"
 
@@ -69,13 +111,9 @@ msgstr "Ф.И.О"
 msgid "Yo'nalishi"
 msgstr "Направление"
 
-#: .\main\templates\appeal_detail.html:19
+#: .\main\templates\appeal_detail.html:19 .\main\templates\appeal_list.html:23
 msgid "Elektron pochta"
 msgstr "Электронная почта"
-
-#: .\main\templates\appeal_detail.html:23
-msgid "Murojaat turi"
-msgstr "Тип заявления"
 
 #: .\main\templates\appeal_detail.html:27
 msgid "Murojaat matni"
@@ -105,9 +143,59 @@ msgstr "Файл"
 msgid "Faylni yuklash"
 msgstr "Загрузить файл"
 
-#: .\main\templates\appeal_detail.html:67
-msgid "Yuborish"
-msgstr "Отправка"
+#: .\main\templates\appeal_list.html:20
+msgid "Fakultet"
+msgstr "Факультет"
+
+#: .\main\templates\appeal_list.html:21
+msgid "Yo'nalish"
+msgstr "Направление"
+
+#: .\main\templates\appeal_list.html:22
+msgid "Guruh"
+msgstr "Группа"
+
+#: .\main\templates\appeal_list.html:24
+msgid "Telefon"
+msgstr "телефон"
+
+#: .\main\templates\appeal_list.html:25
+msgid "Harakat"
+msgstr "действие"
+
+#: .\main\templates\appeal_list.html:48 .\main\templates\appeal_list.html:52
+msgid "Oldingi"
+msgstr "Предыдущий"
+
+#: .\main\templates\appeal_list.html:61 .\main\templates\appeal_list.html:65
+msgid "Keyingi"
+msgstr "Следующий"
+
+#: .\main\templates\my-answers.html:11
+msgid "Javoblar"
+msgstr "Ответы"
+
+#: .\main\templates\my-application-list.html:12
+#: .\main\templates\my-application-list.html:14
+#: .\templates\includes\left.html:8
+msgid "Mening murojaatlarim"
+msgstr "Мои обращения"
+
+#: .\main\templates\my-application-list.html:17
+msgid "Ariza turi"
+msgstr "Тип приложения"
+
+#: .\main\templates\my-application-list.html:18
+msgid "Ariza mavzusi"
+msgstr "Тема заявки"
+
+#: .\main\templates\my-application-list.html:19
+msgid "Kimga"
+msgstr "Кому"
+
+#: .\main\templates\my-application-list.html:20
+msgid "Yuborilgan vaqti"
+msgstr "Время отправки"
 
 #: .\templates\home.html:10 .\templates\home.html:50
 #: .\templates\includes\left.html:5
@@ -235,10 +323,6 @@ msgstr "Связь"
 #: .\templates\includes\header.html:109
 msgid "Tizimga kirish"
 msgstr "Авторизоваться"
-
-#: .\templates\includes\left.html:8
-msgid "Mening murojaatlarim"
-msgstr "Мои обращения"
 
 #: .\templates\includes\left.html:9
 msgid "Javoblarni ko'rish"

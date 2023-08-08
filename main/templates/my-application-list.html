@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %} My Applications {% endblock %}
 
@@ -8,15 +9,15 @@
         {% include 'includes/left.html' %}
         <div class="col-lg-9 mt-5 mb-5">
             
-            <h1 class="general-info__title">Mening murojaatlarim</h1>
+            <h1 class="general-info__title">{% trans "Mening murojaatlarim" %}</h1>
             <table class="table table-striped">
-                <caption>Mening murojaatlarim</caption>
+                <caption>{% trans "Mening murojaatlarim" %}</caption>
                 <thead>
                     <tr>
-                        <th scope="col">Ariza turi</th>
-                        <th scope="col">Ariza mavzusi</th>
-                        <th scope="col">Kimga</th>
-                        <th scope="col">Yuborilgan vaqti</th>
+                        <th scope="col">{% trans "Ariza turi" %}</th>
+                        <th scope="col">{% trans "Ariza mavzusi" %}</th>
+                        <th scope="col">{% trans "Kimga" %}</th>
+                        <th scope="col">{% trans "Yuborilgan vaqti" %}</th>
                         
                     </tr>
                 </thead>

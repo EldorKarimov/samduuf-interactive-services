@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %} My Answers {% endblock %}
 
@@ -7,7 +8,7 @@
     <div class="row">
         {% include 'includes/left.html' %}
         <div class="col-lg-9 mt-5 mb-5">
-            <h1 class="general-info__title">Javoblar</h1>
+            <h1 class="general-info__title">{% trans "Javoblar" %}</h1>
             {% for ans in answers %}
             <div class="input-group mb-3">
                 <span class="input-group-text">{{ ans.leader }}</span>

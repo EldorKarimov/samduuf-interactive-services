@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
+{% load i18n %}
 
 {% block content %}
 <main class="container">
@@ -13,7 +14,7 @@
     </div>
     {% endfor %}
     {% endif %}
-            <h1 class="general-info__title">Rahbariyatga Murojaat</h1>
+            <h1 class="general-info__title">{% trans "Rahbariyatga Murojaat" %}</h1>
             <div class="appeal-leaders">
                 <div class="row">
                     {% for leader in leaders %}
@@ -24,7 +25,7 @@
                                 <h2 class="appeal-leaders__full-name">{{ leader.leader.get_full_name }}</h2>
                                 <p class="appeal-leaders__position">{{ leader.position }}</p>
                                 <p><i class="fa-solid fa-phone-volume"></i>{{ leader.phone }}</p>
-                                <a href="{{ leader.detail_link }}">Batafsil</a>
+                                <a href="{{ leader.detail_link }}">{% trans "Batafsil" %}</a>
                             </div>
                         </div>
                     </div>
@@ -38,7 +39,7 @@
                     
                     <div class="row">
                         <div class="col-lg-6">
-                            <label class="form-label">Murojaat turi</label>
+                            <label class="form-label">{% trans "Murojaat turi" %}</label>
                             <!-- <select class="form-select" aria-label="Default select example">
                                 <option selected>Open this select menu</option>
                                 <option value="1">One</option>
@@ -48,7 +49,7 @@
                             {% render_field form.type_application class+="form-select" aria-label="Default select example" %}
                         </div>
                         <div class="col-lg-6">
-                            <label class="form-label">Rahbariyat</label>
+                            <label class="form-label">{% trans "Rahbariyat" %}</label>
                             <!-- <select class="form-select" aria-label="Default select example">
                                 <option selected>Open this select menu</option>
                                 <option value="1">One</option>
@@ -66,25 +67,25 @@
 
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Fayl yuklash</label>
+                        <label for="formFile" class="form-label">{% trans "Fayl yuklash" %}</label>
                         <!-- <input class="form-control" type="file" id="formFile"> -->
                         {% render_field form.file_upload class+="form-control" type="file" id="formFile" %}
 
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Xabar matni</label>
+                        <label for="exampleFormControlTextarea1" class="form-label">{% trans "Xabar matni" %}</label>
                         <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea> -->
                         {% render_field form.message class+="form-control" id="exampleFormControlTextarea1" rows="5" %}
                         <div class="form-check mt-3">
                             <!-- <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> -->
                             {% render_field form.is_checked class='form-check-input' type="checkbox" id="flexCheckDefault" %}
                             <label class="form-check-label" for="flexCheckDefault">
-                                Qonun talablari doirasida shaxsga doir maʼlumotlarimdan foydalanishga rozilik bildiraman.<a href="https://lex.uz/docs/4396419" style="color: blue;"> https://lex.uz/docs/439641
+                                {% trans "Qonun talablari doirasida shaxsga doir maʼlumotlarimdan foydalanishga rozilik bildiraman" %}.<a href="https://lex.uz/docs/4396419" style="color: blue;"> https://lex.uz/docs/439641
                                 </a>
                             </label>
                         </div>
                         <hr>
-                        <button type="submit" class="btn btn-success">Yuborish</button>
+                        <button type="submit" class="btn btn-success">{% trans "Yuborish" %}</button>
                     </div>
                 </form>
             </div>
