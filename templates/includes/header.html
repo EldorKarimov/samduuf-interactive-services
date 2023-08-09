@@ -63,10 +63,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent1">
                 <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
+                    {% if request.user.is_superuser %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'appeal_list' %}">{% trans "Murojaatlar ro'yhati" %}</a>
+                    </li>
+
+                    {% else %}
+
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'home' %}">{% trans "Bosh sahifa" %}</a>
                     </li>
-
 
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'all_services' %}">{% trans "Interaktiv Xizmatlar "%}
@@ -94,6 +100,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">{% trans "Biz haqimizda" %}</a>
                     </li>
+
+                    {% endif %}
 
                     
 

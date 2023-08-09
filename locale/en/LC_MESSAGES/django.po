@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-09 09:18+0500\n"
+"POT-Creation-Date: 2023-08-09 10:15+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,7 +121,7 @@ msgid "Mening eslab qoling"
 msgstr "Remember me"
 
 #: .\accounts\templates\signin.html:68 .\accounts\templates\signup.html:68
-#: .\templates\includes\header.html:125
+#: .\templates\includes\header.html:131
 msgid "Tizimga kirish"
 msgstr "Sign in"
 
@@ -266,6 +266,10 @@ msgstr "File"
 msgid "Faylni yuklash"
 msgstr "Download file"
 
+#: .\main\templates\appeal_list.html:15 .\templates\includes\header.html:68
+msgid "Murojaatlar ro'yhati"
+msgstr "Reference list"
+
 #: .\main\templates\appeal_list.html:21
 msgid "Yo'nalish"
 msgstr "Direction"
@@ -333,7 +337,7 @@ msgstr "with you remotely from our services"
 msgid "foydalanishingiz mumkin."
 msgstr "you can use."
 
-#: .\templates\home.html:19 .\templates\includes\header.html:80
+#: .\templates\home.html:19 .\templates\includes\header.html:86
 msgid "Rahbarlarga Murojaat"
 msgstr "Appeal to leaders"
 
@@ -405,39 +409,35 @@ msgstr "Another"
 msgid "Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali"
 msgstr "Urgut branch of Samarkand State University named after Sharof Rashidov"
 
-#: .\templates\includes\header.html:67
+#: .\templates\includes\header.html:74
 msgid "Bosh sahifa"
 msgstr "Homepage"
 
-#: .\templates\includes\header.html:72
+#: .\templates\includes\header.html:78
 msgid "Interaktiv Xizmatlar "
 msgstr "Interactive services"
 
-#: .\templates\includes\header.html:83
+#: .\templates\includes\header.html:89
 msgid "Dimlomni tekshirish (talabalar)"
 msgstr "Diploma Check (Students)"
 
-#: .\templates\includes\header.html:86
+#: .\templates\includes\header.html:92
 msgid "Shartnoma olish"
 msgstr "Get a contract"
 
-#: .\templates\includes\header.html:89
+#: .\templates\includes\header.html:95
 msgid "Ma&#039;lumotnoma olish"
 msgstr "Get a reference"
 
-#: .\templates\includes\header.html:95
+#: .\templates\includes\header.html:101
 msgid "Biz haqimizda"
 msgstr "About us"
 
-#: .\templates\includes\header.html:99
-msgid "Bog&#039;lanish"
-msgstr "Connection"
-
-#: .\templates\includes\header.html:116
+#: .\templates\includes\header.html:122
 msgid "Profil"
 msgstr "Profile"
 
-#: .\templates\includes\header.html:119 .\templates\includes\left.html:16
+#: .\templates\includes\header.html:125 .\templates\includes\left.html:16
 msgid "Tizimdan chiqish"
 msgstr "Sign out"
 
@@ -1659,3 +1659,6 @@ msgstr ""
 #: .\venv\Lib\site-packages\modeltranslation\widgets.py:24
 msgid "None"
 msgstr ""
+
+#~ msgid "Bog&#039;lanish"
+#~ msgstr "Connection"
