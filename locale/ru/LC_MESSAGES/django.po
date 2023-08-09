@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-08 15:10+0500\n"
+"POT-Creation-Date: 2023-08-09 09:35+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,133 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
+#: .\accounts\templates\edu-data.html:4 .\accounts\templates\edu-data.html:12
+#: .\templates\includes\left.html:15
+msgid "Ta'lim ma'lumotlari"
+msgstr "Образовательная информация"
+
+#: .\accounts\templates\edu-data.html:14
+#: .\accounts\templates\profile-data.html:14
+msgid "Ushbu ma'lumotlar"
+msgstr "Эта информация"
+
+#: .\accounts\templates\edu-data.html:14
+#: .\accounts\templates\profile-data.html:14
+msgid "tizimidan olindi"
+msgstr "взято из системы"
+
+#: .\accounts\templates\edu-data.html:21
+msgid "Muassasa nomi"
+msgstr "Название учреждения"
+
+#: .\accounts\templates\edu-data.html:25 .\main\templates\appeal_list.html:22
+msgid "Guruh"
+msgstr "Группа"
+
+#: .\accounts\templates\edu-data.html:29
+msgid "Ta'lim shakli"
+msgstr "Форма обучения"
+
+#: .\accounts\templates\edu-data.html:33
+msgid "To'lov shakli"
+msgstr "Форма оплаты"
+
+#: .\accounts\templates\edu-data.html:39 .\main\templates\appeal_list.html:20
+msgid "Fakultet"
+msgstr "Факультет"
+
+#: .\accounts\templates\edu-data.html:43
+msgid "Mutaxassislik"
+msgstr "Специальность"
+
+#: .\accounts\templates\edu-data.html:47
+msgid "Ta'lim turi"
+msgstr "Тип образования"
+
+#: .\accounts\templates\edu-data.html:51
+msgid "Ta'lim tili"
+msgstr "Язык обучения"
+
+#: .\accounts\templates\profile-data.html:4 .\templates\includes\left.html:11
+msgid "Mening ma'lumotlarim"
+msgstr "Моя информация"
+
+#: .\accounts\templates\profile-data.html:21
+msgid "F.I.O"
+msgstr "Ф.И.О"
+
+#: .\accounts\templates\profile-data.html:25
+msgid "Jinsi"
+msgstr "Пол"
+
+#: .\accounts\templates\profile-data.html:29
+#: .\main\templates\appeal_detail.html:19 .\main\templates\appeal_list.html:23
+msgid "Elektron pochta"
+msgstr "Электронная почта"
+
+#: .\accounts\templates\profile-data.html:33
+msgid "Davlat"
+msgstr "Страна"
+
+#: .\accounts\templates\profile-data.html:39
+msgid "Tug'ilgan sana"
+msgstr "Дата рождения"
+
+#: .\accounts\templates\profile-data.html:43
+#, fuzzy
+#| msgid "Telefon raqam"
+msgid "Telefon raqami"
+msgstr "Номер телефона"
+
+#: .\accounts\templates\profile-data.html:47
+msgid "Manzili"
+msgstr "Адрес"
+
+#: .\accounts\templates\signin.html:24
+msgid "Qaytganingizdan xursandmiz"
+msgstr "Мы рады, что ты вернулся"
+
+#: .\accounts\templates\signin.html:27
+msgid "Interaktiv xizmatlarga o'tish uchun tizimga kiring"
+msgstr "Войдите, чтобы получить доступ к интерактивным услугам"
+
+#: .\accounts\templates\signin.html:43 .\accounts\templates\signup.html:37
+msgid "Talaba ID"
+msgstr "Студент ID"
+
+#: .\accounts\templates\signin.html:53 .\accounts\templates\signup.html:44
+msgid "Parol"
+msgstr "Пароль"
+
+#: .\accounts\templates\signin.html:64
+msgid "Mening eslab qoling"
+msgstr "Запомнить меня"
+
+#: .\accounts\templates\signin.html:68 .\accounts\templates\signup.html:68
+#: .\templates\includes\header.html:125
+msgid "Tizimga kirish"
+msgstr "Авторизоваться"
+
+#: .\accounts\templates\signin.html:80
+msgid "Hisobingiz yo'qmi"
+msgstr "Нет учетной записи"
+
+#: .\accounts\templates\signin.html:81 .\accounts\templates\signup.html:55
+msgid "Ro'yhatdan o'tish"
+msgstr "Зарегистрироваться"
+
+#: .\accounts\templates\signup.html:20
+msgid "Yangi Hisob Yaratish"
+msgstr "Создать новый аккаунт"
+
+#: .\accounts\templates\signup.html:23
+msgid "Hemisdagi id va parol bo'yicha ro'yhatdan o'tiladi"
+msgstr "Вы будете зарегистрированы, используя свой Hemis ID и пароль"
+
+#: .\accounts\templates\signup.html:67
+msgid "Hisobingiz bormi"
+msgstr "Иметь аккаунт"
+
 #: .\config\settings.py:129
 msgid "Uzbek"
 msgstr "Uzbek"
@@ -30,7 +157,7 @@ msgstr "English"
 
 #: .\config\settings.py:131
 msgid "Russian"
-msgstr ""
+msgstr "Russian"
 
 #: .\main\models.py:11
 msgid "Position"
@@ -82,8 +209,12 @@ msgid "Xabar matni"
 msgstr "Текст заявки"
 
 #: .\main\templates\appeal-to-leader.html:83
-msgid "Qonun talablari doirasida shaxsga doir maʼlumotlarimdan foydalanishga rozilik bildiraman"
-msgstr "Я согласен на использование моих персональных данных в соответствии с требованиями закона"
+msgid ""
+"Qonun talablari doirasida shaxsga doir maʼlumotlarimdan foydalanishga "
+"rozilik bildiraman"
+msgstr ""
+"Я согласен на использование моих персональных данных в соответствии с "
+"требованиями закона"
 
 #: .\main\templates\appeal-to-leader.html:88 .\main\templates\appeal.html:62
 #: .\main\templates\appeal_detail.html:67
@@ -110,10 +241,6 @@ msgstr "Ф.И.О"
 #: .\main\templates\appeal_detail.html:15
 msgid "Yo'nalishi"
 msgstr "Направление"
-
-#: .\main\templates\appeal_detail.html:19 .\main\templates\appeal_list.html:23
-msgid "Elektron pochta"
-msgstr "Электронная почта"
 
 #: .\main\templates\appeal_detail.html:27
 msgid "Murojaat matni"
@@ -143,17 +270,9 @@ msgstr "Файл"
 msgid "Faylni yuklash"
 msgstr "Загрузить файл"
 
-#: .\main\templates\appeal_list.html:20
-msgid "Fakultet"
-msgstr "Факультет"
-
 #: .\main\templates\appeal_list.html:21
 msgid "Yo'nalish"
 msgstr "Направление"
-
-#: .\main\templates\appeal_list.html:22
-msgid "Guruh"
-msgstr "Группа"
 
 #: .\main\templates\appeal_list.html:24
 msgid "Telefon"
@@ -320,29 +439,21 @@ msgstr "о нас"
 msgid "Bog&#039;lanish"
 msgstr "Связь"
 
-#: .\templates\includes\header.html:109
-msgid "Tizimga kirish"
-msgstr "Авторизоваться"
+#: .\templates\includes\header.html:116
+msgid "Profil"
+msgstr "Профиль"
+
+#: .\templates\includes\header.html:119 .\templates\includes\left.html:16
+msgid "Tizimdan chiqish"
+msgstr "выход"
 
 #: .\templates\includes\left.html:9
 msgid "Javoblarni ko'rish"
 msgstr "Посмотреть ответы"
 
-#: .\templates\includes\left.html:11
-msgid "Mening ma'lumotlarim"
-msgstr "Моя информация"
-
 #: .\templates\includes\left.html:13
 msgid "Umumiy ma'lumotlar"
 msgstr "Общая информация"
-
-#: .\templates\includes\left.html:15
-msgid "Ta'lim ma'lumotlari"
-msgstr "Образовательная информация"
-
-#: .\templates\includes\left.html:16
-msgid "Tizimdan chiqish"
-msgstr "выход"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:15
 msgid "Messages"

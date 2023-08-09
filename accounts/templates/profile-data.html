@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %} My Info {% endblock %}
+{% block title %} {% trans "Mening ma'lumotlarim" %} {% endblock %}
 
 {% block content %}
 <main class="container">
@@ -10,40 +11,40 @@
              <div class="general-info">
                  <h1 class="general-info__title">umumiy ma'lumotlar</h1>
                  <p class="general-info__description">
-                    Ushbu ma'lumotlar <a href="https://student.samduuf.uz/" target="_blank" style="color: blue;">student.samduuf.uz</a> tizimidan olindi.
+                    {% trans "Ushbu ma'lumotlar" %} <a href="https://student.samduuf.uz/" target="_blank" style="color: blue;">student.samduuf.uz</a> {% trans "tizimidan olindi" %}.
                  </p>
              </div>
              <hr style="width: 100%;">
              <div class="row">
                  <div class="col-lg-6">
                      <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">F.I.O</label>
+                         <label for="exampleInputEmail1" class="form-label">{% trans "F.I.O" %}</label>
                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.full_name }}" readonly>
                      </div>
                      <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Jinsi</label>
+                         <label for="exampleInputEmail1" class="form-label">{% trans "Jinsi" %}</label>
                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.gender }}" readonly>
                      </div>
                      <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Elektron pochta</label>
+                         <label for="exampleInputEmail1" class="form-label">{% trans "Elektron pochta" %}</label>
                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.email }}" readonly>
                      </div>
                      <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Davlat</label>
+                         <label for="exampleInputEmail1" class="form-label">{% trans "Davlat" %}</label>
                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.country }}" readonly>
                      </div>
                  </div>
                  <div class="col-lg-6">
                      <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Tug'ilgan sana</label>
+                         <label for="exampleInputEmail1" class="form-label">{% trans "Tug'ilgan sana" %}</label>
                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.birth_date }}" readonly>
                      </div>
                      <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Telefon raqami</label>
-                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="+998973950072" readonly>
+                         <label for="exampleInputEmail1" class="form-label">{% trans "Telefon raqami" %}</label>
+                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.phone }}" readonly>
                      </div>
                      <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Manzili</label>
+                         <label for="exampleInputEmail1" class="form-label">{% trans "Manzili" %}</label>
                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ student.address }}" readonly>
                      </div>
                  </div>

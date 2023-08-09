@@ -95,9 +95,7 @@
                         <a class="nav-link" href="#">{% trans "Biz haqimizda" %}</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">{% trans "Bog&#039;lanish" %}</a>
-                    </li>
+                    
 
 
                     {% if user.is_authenticated %}
@@ -122,7 +120,7 @@
                     </li>
                     {% else %}
                     <li class="nav-item nav-item__login">
-                        <a href="{% url 'login' %}" class="btn btn-outline-primary"> <i class="fa-solid fa-arrow-right-to-bracket"></i>{% trans "Tizimga kirish" %}</a>
+                        <a href="{% url 'login' %}" class="btn btn-outline-primary"> <i class="fa-solid fa-arrow-right-to-bracket me-2"></i>{% trans "Tizimga kirish" %}</a>
                     </li>
                     {% endif %}
 

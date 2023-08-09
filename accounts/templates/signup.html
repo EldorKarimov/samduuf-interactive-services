@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
+{% load i18n %}
 
 {% block title %} Sign Up {% endblock %}
 
@@ -16,10 +17,10 @@
                         <div class="card-body p-4">
                             <div class="text-center mt-2">
                                 <a href="{% url 'home' %}">
-                                    <h5 class="text-primary">Yangi Hisob Yaratish</h5>
+                                    <h5 class="text-primary">{% trans "Yangi Hisob Yaratish" %}</h5>
                                 </a>
                                 
-                                <p class="text-muted">Hemisdagi id va parol bo'yicha ro'yhatdan o'tiladi.</p>
+                                <p class="text-muted">{% trans "Hemisdagi id va parol bo'yicha ro'yhatdan o'tiladi" %}.</p>
                             </div>
                             <div class="p-2 mt-4">
                                 {% if messages %}
@@ -33,17 +34,17 @@
                                     {% csrf_token %}
 
                                     <div class="mb-3">
-                                        <label for="username" class="form-label">Talaba Id</label>
+                                        <label for="username" class="form-label">{% trans "Talaba ID" %}</label>
                                         <!-- <input type="text" class="form-control" id="username" placeholder="Enter username"> -->
-                                        {% render_field form.username class+="form-control" placeholder="Talaba ID" %}
+                                        {% render_field form.username class+="form-control" placeholder="Student ID" %}
                                     </div>
 
                                     <div class="mb-3">
                                         
-                                        <label class="form-label" for="password-input">Parol</label>
+                                        <label class="form-label" for="password-input">{% trans "Parol" %}</label>
                                         <div class="position-relative auth-pass-inputgroup mb-3">
                                             <!-- <input type="password" class="form-control pe-5 password-input" placeholder="Enter password" id="password-input"> -->
-                                            {% render_field form.password class+="form-control pe-5 password-input" placeholder="Parol" id="password-input" %}
+                                            {% render_field form.password class+="form-control pe-5 password-input" placeholder="Password" id="password-input" %}
                                             <!-- <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button> -->
                                             
                                         </div>
@@ -51,7 +52,7 @@
 
 
                                     <div class="mt-4">
-                                        <button class="btn btn-success w-100" type="submit">Sign Up</button>
+                                        <button class="btn btn-success w-100" type="submit">{% trans "Ro'yhatdan o'tish" %}</button>
                                     </div>
 
                                     
@@ -63,8 +64,8 @@
                     <!-- end card -->
 
                     <div class="mt-4 text-center">
-                        <p class="mb-0">Hisobingiz bormi ? <a href="{% url 'login' %}"
-                                class="fw-semibold text-primary text-decoration-underline"> Tizimga kirish </a> </p>
+                        <p class="mb-0">{% trans "Hisobingiz bormi" %} ? <a href="{% url 'login' %}"
+                                class="fw-semibold text-primary text-decoration-underline"> {% trans "Tizimga kirish" %} </a> </p>
                     </div>
 
                 </div>

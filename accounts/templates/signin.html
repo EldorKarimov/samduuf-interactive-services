@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
+{% load i18n %}
 
 
 {% block title %} Sign In {% endblock %}
@@ -20,10 +21,10 @@
                         <div class="card-body p-4">
                             <div class="text-center mt-2">
                                 <a href="{% url 'home' %}">
-                                    <h5 class="text-primary">Qaytganingizdan xursandmiz !</h5>
+                                    <h5 class="text-primary">{% trans "Qaytganingizdan xursandmiz" %} !</h5>
                                 </a>
                                 
-                                <p class="text-muted">Interaktiv xizmatlarga o'tish uchun tizimga kiring.</p>
+                                <p class="text-muted">{% trans "Interaktiv xizmatlarga o'tish uchun tizimga kiring" %}.</p>
                             </div>
                             <div class="p-2 mt-4">
 
@@ -39,32 +40,32 @@
                                     {% csrf_token %}
 
                                     <div class="mb-3">
-                                        <label for="username" class="form-label">Talaba ID</label>
+                                        <label for="username" class="form-label">{% trans "Talaba ID" %}</label>
                                         <!-- {% render_field form.username class+="form-control" placeholder="Talaba ID" id="username" %} -->
                                         <!-- <input type="text" class="form-control" id="username" placeholder="Enter username"> -->
-                                        {% render_field form.username class+="form-control" type="text" placeholder="Talaba ID" %}
+                                        {% render_field form.username class+="form-control" type="text" placeholder="Student ID" %}
                                     </div>
 
                                     <div class="mb-3">
                                         <div class="float-end">
-                                            <a href="auth-pass-reset-basic.html" class="text-muted">Parolni unutdingizmi?</a>
+                                            <!-- <a href="auth-pass-reset-basic.html" class="text-muted">Parolni unutdingizmi?</a> -->
                                         </div>
-                                        <label class="form-label" for="password-input">Parol</label>
+                                        <label class="form-label" for="password-input">{% trans "Parol" %}</label>
                                         <div class="position-relative auth-pass-inputgroup mb-3">
                                             <!-- <input type="password" class="form-control pe-5 password-input" placeholder="Enter password" id="password-input"> -->
                                             
-                                            {% render_field form.password class+="form-control" type="password" placeholder="Parol" aria-label="Password" aria-describedby="password-addon" %}
+                                            {% render_field form.password class+="form-control" type="password" placeholder="Password" aria-label="Password" aria-describedby="password-addon" %}
                                         </div>
                                     </div>
 
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value=""
                                             id="auth-remember-check">
-                                        <label class="form-check-label" for="auth-remember-check">Remember me</label>
+                                        <label class="form-check-label" for="auth-remember-check">{% trans "Mening eslab qoling" %}</label>
                                     </div>
 
                                     <div class="mt-4">
-                                        <button class="btn btn-success w-100" type="submit">Sign In</button>
+                                        <button class="btn btn-success w-100" type="submit">{% trans "Tizimga kirish" %}</button>
                                     </div>
 
                                     
@@ -76,8 +77,8 @@
                     <!-- end card -->
 
                     <div class="mt-4 text-center">
-                        <p class="mb-0">Hisobingiz yo'qmi ? <a href="{% url 'student_register' %}"
-                                class="fw-semibold text-primary text-decoration-underline"> Ro'yhatdan o'tish </a> </p>
+                        <p class="mb-0">{% trans "Hisobingiz yo'qmi" %} ? <a href="{% url 'student_register' %}"
+                                class="fw-semibold text-primary text-decoration-underline"> {% trans "Ro'yhatdan o'tish" %} </a> </p>
                     </div>
 
                 </div>
