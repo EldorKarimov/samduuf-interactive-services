@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-10 10:50+0500\n"
+"POT-Creation-Date: 2023-08-10 11:35+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,10 @@ msgid ""
 "Parolingiz kamida 8 ta belgidan iborat boʻlishi kerak, shaxsiy "
 "maʼlumotlaringizga juda oʻxshash boʻlmasligi, tez-tez ishlatiladigan parol "
 "boʻlmasligi va butunlay raqamli boʻlishi mumkin emas."
-msgstr "Your password must contain at least 8 characters, can't be too similar to your personal information, can't be a commonly used password, and can't be entirely numeric."
+msgstr ""
+"Your password must contain at least 8 characters, can't be too similar to "
+"your personal information, can't be a commonly used password, and can't be "
+"entirely numeric."
 
 #: .\accounts\templates\edu-data.html:4 .\accounts\templates\edu-data.html:12
 #: .\templates\includes\left.html:15
@@ -453,6 +456,38 @@ msgstr "Appeals in progress"
 #: .\templates\home.html:70
 msgid "Boshqa"
 msgstr "Another"
+
+#: .\templates\includes\footer.html:7
+msgid "Xarita"
+msgstr "Map"
+
+#: .\templates\includes\footer.html:18
+msgid "Biz ijtimoiy tarmoqlardamiz"
+msgstr "We are on social media"
+
+#: .\templates\includes\footer.html:55
+msgid "Bizning manzil"
+msgstr "Our address"
+
+#: .\templates\includes\footer.html:88
+msgid "Samarqand davlat universiteti Urgut filiali"
+msgstr "Urgut Branch of Samarkand State University"
+
+#: .\templates\includes\footer.html:89
+msgid ""
+"Sayt materiallaridan to'liq yoki qisman foydalanilganda ushbu manbani "
+"ko'rsatish majburiydir"
+msgstr "When using the site materials in whole or in part, it is mandatory to indicate this source"
+
+#: .\templates\includes\footer.html:90
+msgid "Diqqat"
+msgstr "Attention"
+
+#: .\templates\includes\footer.html:90
+msgid ""
+"Agar matnda xato topsangiz, uni tanlang va ma'muriyatni xabardor qilish "
+"uchun Ctrl + Enter tugmalarini bosing"
+msgstr "If you find an error in the text, select it and press Ctrl + Enter to notify the administration"
 
 #: .\templates\includes\header.html:56
 msgid "Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali"

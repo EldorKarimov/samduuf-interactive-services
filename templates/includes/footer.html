@@ -1,9 +1,10 @@
+{% load i18n %}
 <footer class="footer">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="footer-card">
-                    <h2 class="footer-title">Map</h2>
+                    <h2 class="footer-title">{% trans "Xarita" %}</h2>
                     <div style="position:relative;overflow:hidden; margin-top:30px">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2223.253237374265!2d67.17895302981071!3d39.42076785403022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4cc57a7ebf9d1d%3A0x2faeb12ed195b8b8!2sKamongaron%20Kasb%20Hunar%20Kolleji!5e1!3m2!1sen!2s!4v1670501900630!5m2!1sen!2s"
@@ -14,7 +15,7 @@
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="footer-card">
-                    <h2 class="footer-title">We are on social media</h2>
+                    <h2 class="footer-title">{% trans "Biz ijtimoiy tarmoqlardamiz" %}</h2>
                     <ul class="footer-links">
                         <li><a data-turbo="true" href="https://t.me/samdu_urgut_filial"><i class="footer-icons"><svg
                                         width="33" height="33" viewBox="0 0 33 33" fill="none"
@@ -51,7 +52,7 @@
 
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="footer-card">
-                    <h2 class="footer-title">Our address</h2>
+                    <h2 class="footer-title">{% trans "Bizning manzil" %}</h2>
                     <ul class="footer-links">
                         <li><a data-turbo="true" href="https://goo.gl/maps/fYoEcgAB1pdNNuRt8?coh=178572&entry=tt"><i
                                     class="footer-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16"
@@ -84,12 +85,9 @@
                 </div>
             </div>
             <div class="col-12 footer-line"></div>
-            <div class="col-lg-7 col-md-7 col-sm-12 text-copyright">© Samarkand State University Urgut
-                Branch,<br> When
-                using the
-                materials of the site in full or in part, it is mandatory to indicate this source.<br>Attention!
-                If
-                you find an error in the text, select it and press Ctrl + Enter to notify the administration
+            <div class="col-lg-7 col-md-7 col-sm-12 text-copyright">© {% trans "Samarqand davlat universiteti Urgut filiali" %},<br> 
+                {% trans "Sayt materiallaridan to'liq yoki qisman foydalanilganda ushbu manbani ko'rsatish majburiydir" %}.<br>
+                {% trans "Diqqat" %}! {% trans "Agar matnda xato topsangiz, uni tanlang va ma'muriyatni xabardor qilish uchun Ctrl + Enter tugmalarini bosing" %}
             </div>
             <div class="col-lg-5 col-md-5 col-sm-12">
                 <div class="counters">
