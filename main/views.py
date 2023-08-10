@@ -5,7 +5,7 @@ from django.core.paginator import Paginator
 
 from .models import Leader, Appeal, Answer
 from .forms import AppealForm, AnswerForm
-from accounts.permissions import CustomLoginRequiredMixin
+from accounts.permissions import CustomLoginRequiredMixin, CustomStudentLoginRequiredMixin
 from django.contrib import messages
 from accounts.api import HemisApi
 
@@ -28,11 +28,11 @@ class HomePageView(View):
         return render(request, 'home.html', context)
     
 
-class AllServicesView(LoginRequiredMixin, View):
+class AllServicesView(CustomStudentLoginRequiredMixin, View):
     def get(self, request):
         return render(request, 'all-services.html')
     
-class AppealToLeaderView(LoginRequiredMixin, View):
+class AppealToLeaderView(CustomStudentLoginRequiredMixin, View):
     def get(self, request):
         form = AppealForm()
         leaders = Leader.objects.all()
@@ -59,7 +59,7 @@ class AppealToLeaderView(LoginRequiredMixin, View):
             return render(request, 'appeal-to-leader.html', context)
     
 
-class MyApplicationView(LoginRequiredMixin, View):
+class MyApplicationView(CustomStudentLoginRequiredMixin, View):
     def get(self, request):
         appeals = Appeal.objects.filter(student__username = request.user.username).order_by('-created_at')
         context = {
@@ -67,7 +67,7 @@ class MyApplicationView(LoginRequiredMixin, View):
         }
         return render(request, 'my-application-list.html', context)
     
-class MyAnswerView(LoginRequiredMixin, View):
+class MyAnswerView(CustomStudentLoginRequiredMixin, View):
     def get(self, request):
         answers = Answer.objects.filter(student_id=request.user.username)
         context = {

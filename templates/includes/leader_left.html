@@ -1,0 +1,12 @@
+{% load i18n %}
+<div class="col-lg-3 mt-5 mb-5">
+    <div class="section-left">
+        <h5 class="section-left__title">
+            {% trans "Profil ma'lumotlari" %}
+        </h5> <hr class="section-left__line">
+        <p class="section-left__item"><a href="{% url 'profile_leader' %}"><i class="fa-solid fa-info"></i>{% trans "Umumiy ma'lumotlar" %}</a></p> <hr class="section-left__line">
+        <p class="section-left__item"><a href="{% url 'password_change' %}"><i class="fa-solid fa-key"></i>{% trans "Parolni o'zgartirish" %}</a></p>
+       <hr class="section-left__line">
+        <p class="section-left__item"><a href="{% url 'logout' %}"><i class="fa-solid fa-right-to-bracket"></i>{% trans "Tizimdan chiqish" %}</a></p>
+    </div>
+</div>

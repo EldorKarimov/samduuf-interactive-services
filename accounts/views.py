@@ -1,13 +1,15 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.views import View
-from .forms import StudentRegisterForm
+from .forms import LeaderProfileUpdateForm, StudentRegisterForm, CustomPasswordChangeForm
 from .models import Student
 from django.http import HttpResponse
 from .api import HemisApi
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .permissions import CustomLoginRequiredMixin
+
 
 
 
@@ -79,3 +81,44 @@ class EduDataView(LoginRequiredMixin, View):
             'student':student
         }
         return render(request, 'edu-data.html', context)
+    
+class LeaderProfileView(CustomLoginRequiredMixin, View):
+    def get(self, request):
+        leader = Student.objects.get(username = request.user.username)
+        form = LeaderProfileUpdateForm(instance=leader)
+        context = {
+            'form':form
+        }
+        return render(request, 'leader_profile.html', context)
+    
+    def post(self, request):
+        leader = Student.objects.get(username = request.user.username)
+        form = LeaderProfileUpdateForm(data=request.POST, instance=leader)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Data changed successfully.")
+            return redirect('profile_leader')
+        else:
+            context = {
+                'form':form
+            }
+            return render(request, 'leader_profile.html', context)
+        
+class PasswordChangeView(CustomLoginRequiredMixin, View):
+    def get(self, request):
+        form = CustomPasswordChangeForm(user=request.user)
+        context = {
+            'form':form
+        }
+        return render(request, 'password_change.html', context)
+    
+    def post(self, request):
+        form = CustomPasswordChangeForm(user=request.user, data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+        else:
+            context = {
+                'form':form
+            }
+            return render(request, 'password_change.html', context)

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-09 10:15+0500\n"
+"POT-Creation-Date: 2023-08-10 10:50+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,29 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\accounts\forms.py:68
+msgid "Eski parolni kiriting"
+msgstr "Enter the old password"
+
+#: .\accounts\forms.py:72
+msgid "Yangi parol kiriting"
+msgstr "Enter a new password"
+
+#: .\accounts\forms.py:76
+msgid "Yangi parolni qaytadan kiriting"
+msgstr "Re-enter the new password"
+
+#: .\accounts\forms.py:84
+msgid "Ikkita yangi parol maydoni mos kelmadi."
+msgstr "The two new password fields did not match."
+
+#: .\accounts\forms.py:90
+msgid ""
+"Parolingiz kamida 8 ta belgidan iborat boʻlishi kerak, shaxsiy "
+"maʼlumotlaringizga juda oʻxshash boʻlmasligi, tez-tez ishlatiladigan parol "
+"boʻlmasligi va butunlay raqamli boʻlishi mumkin emas."
+msgstr "Your password must contain at least 8 characters, can't be too similar to your personal information, can't be a commonly used password, and can't be entirely numeric."
 
 #: .\accounts\templates\edu-data.html:4 .\accounts\templates\edu-data.html:12
 #: .\templates\includes\left.html:15
@@ -65,36 +88,62 @@ msgstr "Type of education"
 msgid "Ta'lim tili"
 msgstr "Language of education"
 
-#: .\accounts\templates\profile-data.html:4 .\templates\includes\left.html:11
-msgid "Mening ma'lumotlarim"
-msgstr "My information"
+#: .\accounts\templates\leader_profile.html:12
+#: .\templates\includes\leader_left.html:7 .\templates\includes\left.html:13
+msgid "Umumiy ma'lumotlar"
+msgstr "General information"
 
+#: .\accounts\templates\leader_profile.html:28
 #: .\accounts\templates\profile-data.html:21
 msgid "F.I.O"
 msgstr "Full Name"
 
+#: .\accounts\templates\leader_profile.html:33
 #: .\accounts\templates\profile-data.html:25
 msgid "Jinsi"
 msgstr "Gender"
 
+#: .\accounts\templates\leader_profile.html:38
 #: .\accounts\templates\profile-data.html:29
 #: .\main\templates\appeal_detail.html:19 .\main\templates\appeal_list.html:23
 msgid "Elektron pochta"
 msgstr "Email"
 
+#: .\accounts\templates\leader_profile.html:43
 #: .\accounts\templates\profile-data.html:33
 msgid "Davlat"
 msgstr "Country"
 
+#: .\accounts\templates\leader_profile.html:50
 #: .\accounts\templates\profile-data.html:39
 msgid "Tug'ilgan sana"
 msgstr "Date of birth"
 
+#: .\accounts\templates\leader_profile.html:55
 #: .\accounts\templates\profile-data.html:43
-#, fuzzy
-#| msgid "Telefon raqam"
 msgid "Telefon raqami"
 msgstr "Phone number"
+
+#: .\accounts\templates\leader_profile.html:60
+msgid "Manzil"
+msgstr "Address"
+
+#: .\accounts\templates\leader_profile.html:65
+msgid "Yangilash"
+msgstr "Update"
+
+#: .\accounts\templates\password_change.html:13
+#: .\templates\includes\leader_left.html:8
+msgid "Parolni o'zgartirish"
+msgstr "Change password"
+
+#: .\accounts\templates\password_change.html:57
+msgid "Saqlash"
+msgstr "Save"
+
+#: .\accounts\templates\profile-data.html:4 .\templates\includes\left.html:11
+msgid "Mening ma'lumotlarim"
+msgstr "My information"
 
 #: .\accounts\templates\profile-data.html:47
 msgid "Manzili"
@@ -121,7 +170,7 @@ msgid "Mening eslab qoling"
 msgstr "Remember me"
 
 #: .\accounts\templates\signin.html:68 .\accounts\templates\signup.html:68
-#: .\templates\includes\header.html:131
+#: .\templates\includes\header.html:137
 msgid "Tizimga kirish"
 msgstr "Sign in"
 
@@ -145,23 +194,23 @@ msgstr "You will be registered using your Hemis ID and password"
 msgid "Hisobingiz bormi"
 msgstr "Have an account"
 
-#: .\config\settings.py:129
+#: .\config\settings.py:130
 msgid "Uzbek"
 msgstr "Uzbek"
 
-#: .\config\settings.py:130
+#: .\config\settings.py:131
 msgid "English"
 msgstr "English"
 
-#: .\config\settings.py:131
+#: .\config\settings.py:132
 msgid "Russian"
-msgstr ""
+msgstr "Russian"
 
-#: .\main\models.py:11
+#: .\main\models.py:10
 msgid "Position"
 msgstr "Pozitsiya"
 
-#: .\main\models.py:15
+#: .\main\models.py:14
 msgid "Leaders"
 msgstr "Boshliqlar"
 
@@ -196,7 +245,7 @@ msgstr "Type of application"
 
 #: .\main\templates\appeal-to-leader.html:52
 msgid "Rahbariyat"
-msgstr ""
+msgstr "Leadership"
 
 #: .\main\templates\appeal-to-leader.html:70 .\main\templates\appeal.html:53
 msgid "Fayl yuklash"
@@ -213,7 +262,7 @@ msgid ""
 msgstr "I agree to the use of my personal data as required by law"
 
 #: .\main\templates\appeal-to-leader.html:88 .\main\templates\appeal.html:62
-#: .\main\templates\appeal_detail.html:67
+#: .\main\templates\appeal_detail.html:69
 msgid "Yuborish"
 msgstr "Send"
 
@@ -225,8 +274,8 @@ msgstr "Subject of application"
 msgid "O'qituvchi tanlash"
 msgstr "Choosing a teacher"
 
-#: .\main\templates\appeal_detail.html:7 .\main\templates\appeal_detail.html:57
-#: .\main\templates\appeal_detail.html:63
+#: .\main\templates\appeal_detail.html:7 .\main\templates\appeal_detail.html:59
+#: .\main\templates\appeal_detail.html:65
 msgid "Javob yozish"
 msgstr "Write an answer"
 
@@ -258,11 +307,11 @@ msgstr "Phone"
 msgid "Murojaat mavzusi"
 msgstr "Subject of application"
 
-#: .\main\templates\appeal_detail.html:50
+#: .\main\templates\appeal_detail.html:51
 msgid "Fayl"
 msgstr "File"
 
-#: .\main\templates\appeal_detail.html:52
+#: .\main\templates\appeal_detail.html:53
 msgid "Faylni yuklash"
 msgstr "Download file"
 
@@ -433,21 +482,22 @@ msgstr "Get a reference"
 msgid "Biz haqimizda"
 msgstr "About us"
 
-#: .\templates\includes\header.html:122
+#: .\templates\includes\header.html:123 .\templates\includes\header.html:127
 msgid "Profil"
 msgstr "Profile"
 
-#: .\templates\includes\header.html:125 .\templates\includes\left.html:16
+#: .\templates\includes\header.html:131
+#: .\templates\includes\leader_left.html:10 .\templates\includes\left.html:16
 msgid "Tizimdan chiqish"
 msgstr "Sign out"
+
+#: .\templates\includes\leader_left.html:5
+msgid "Profil ma'lumotlari"
+msgstr "Profile information"
 
 #: .\templates\includes\left.html:9
 msgid "Javoblarni ko'rish"
 msgstr "View answers"
-
-#: .\templates\includes\left.html:13
-msgid "Umumiy ma'lumotlar"
-msgstr "General information"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:15
 msgid "Messages"

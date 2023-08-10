@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load i18n %}
+
+{% block title %} Profile {% endblock %}
+{% block content %}
+<main class="container">
+    <div class="row">
+         {% include 'includes/leader_left.html' %}
+         <div class="col-lg-9 mt-5 mb-5" style="border: 1px solid rgb(230, 224, 224); border-radius: 5px;">
+             <div class="general-info">
+                 <h1 class="general-info__title">{% trans "Umumiy ma'lumotlar" %}</h1>
+                 <!-- <p class="general-info__description">Lorem ipsum dolor sit amet consectetur sapiente voluptatibus optio necessitatibus enim et ex quaerat dicta iusto recusandae excepturi. Deleniti, illum consequuntur tempora doloribus magnam modi magni!</p> -->
+             </div>
+             <hr style="width: 100%;">
+             <form action="" method="post">
+                {% csrf_token %}
+                {% if messages %}
+                {% for mess in messages %}
+                <div class="alert alert-success" role="alert">
+                    {{ mess }}
+                </div>
+                {% endfor %}
+                {% endif %}
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">{% trans "F.I.O" %}</label>
+                            <!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+                            {% render_field form.full_name class+="form-control" %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">{% trans "Jinsi" %}</label>
+                            <!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="Erkak" readonly> -->
+                            {% render_field form.gender class+="form-control" %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">{% trans "Elektron pochta" %}</label>
+                            <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="karimoveldor19021@gmail.com" readonly> -->
+                            {% render_field form.email class+="form-control" %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">{% trans "Davlat" %}</label>
+                            <!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="O'zbekiston" readonly> -->
+                            {% render_field form.country class+="form-control" %}
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">{% trans "Tug'ilgan sana" %}</label>
+                            <!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="2000-02-19" readonly> -->
+                            {% render_field form.birth_date class+="form-control" %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">{% trans "Telefon raqami" %}</label>
+                            <!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="+998973950072" readonly> -->
+                            {% render_field form.phone class+="form-control" %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">{% trans "Manzil" %}</label>
+                            <!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="Urgut shahri Bog'ishamol mahallasi" readonly> -->
+                            {% render_field form.address class+="form-control" %}
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">{% trans "Yangilash" %}</button>
+                </div>
+             </form>
+             
+         </div>
+    </div>
+ </main>
+ {% endblock %}

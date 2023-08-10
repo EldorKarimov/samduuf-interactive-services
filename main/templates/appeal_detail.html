@@ -46,11 +46,13 @@
           <label for="exampleInputEmail1" class="form-label">{% trans "Murojaat mavzusi" %}</label>
           <input type="email" class="form-control" id="exampleInputEmail1" value="{{ appeal_student.theme }}" aria-describedby="emailHelp" readonly>
         </div>
+        {% if appeal_student.file_upload %}
         <div class="mb-3">
           <label for="formFile" class="form-label">{% trans "Fayl" %}</label> <br>
             <input type="text" class="form-control" readonly value="{{ appeal_student.file_upload }}"> <br>
-            <a href="#" class="btn btn-secondary">{% trans "Faylni yuklash" %}</a>
+            <a href="{{ appeal_student.file_upload.url }}" class="btn btn-secondary">{% trans "Faylni yuklash" %}</a>
         </div>
+        {% endif %}
       </div>
     </div> <hr>
 

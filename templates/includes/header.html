@@ -118,9 +118,15 @@
                             </svg>
                         </a>
                         <ul class="drop-down px-0 py-2">
+                            {% if request.user.is_superuser %}
+                            <li class="px-3"><a
+                                href="{% url 'profile_leader' %}">{% trans "Profil" %}</a>
+                            </li>
+                            {% else %}
                             <li class="px-3"><a
                                 href="{% url 'profile_data' %}">{% trans "Profil" %}</a>
                             </li>
+                            {% endif %}
                             <li class="px-3"><a
                                     href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket me-2"></i>{% trans "Tizimdan chiqish" %}</a>
                             </li>

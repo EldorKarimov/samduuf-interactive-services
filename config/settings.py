@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # packages
     'widget_tweaks',
     'modeltranslation',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -154,3 +155,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'accounts.Student'
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

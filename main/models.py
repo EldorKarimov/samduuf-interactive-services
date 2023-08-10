@@ -7,7 +7,6 @@ from accounts.models import Student
 class Leader(models.Model):
     leader = models.OneToOneField(Student, on_delete=models.PROTECT)
     image = models.ImageField(upload_to='media/leader/image')
-    phone = models.CharField(max_length=13)
     position = models.CharField(verbose_name=_('Position'), max_length=128)
     detail_link = models.TextField()
 

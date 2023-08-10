@@ -27,6 +27,7 @@ class Student(AbstractUser):
     passport_number = models.CharField(max_length=10, null=True, blank=True)
     gender = models.CharField(max_length=10, null=True, blank=True)
     country = models.CharField(max_length=50, null=True, blank=True)
+    is_student = models.BooleanField(default=True)
 
 
 
