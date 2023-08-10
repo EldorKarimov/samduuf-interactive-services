@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-10 11:35+0500\n"
+"POT-Creation-Date: 2023-08-10 14:50+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -144,6 +144,16 @@ msgstr "Change password"
 msgid "Saqlash"
 msgstr "Save"
 
+#: .\accounts\templates\password_change_done.html:14
+msgid "Parol muvaffaqqiyatli o'zgartirildi."
+msgstr "Password changed successfully."
+
+#: .\accounts\templates\password_change_done.html:17
+#: .\accounts\templates\signin.html:68 .\accounts\templates\signup.html:68
+#: .\templates\includes\header.html:137
+msgid "Tizimga kirish"
+msgstr "Sign in"
+
 #: .\accounts\templates\profile-data.html:4 .\templates\includes\left.html:11
 msgid "Mening ma'lumotlarim"
 msgstr "My information"
@@ -172,11 +182,6 @@ msgstr "Password"
 msgid "Mening eslab qoling"
 msgstr "Remember me"
 
-#: .\accounts\templates\signin.html:68 .\accounts\templates\signup.html:68
-#: .\templates\includes\header.html:137
-msgid "Tizimga kirish"
-msgstr "Sign in"
-
 #: .\accounts\templates\signin.html:80
 msgid "Hisobingiz yo'qmi"
 msgstr "Have an account"
@@ -196,6 +201,22 @@ msgstr "You will be registered using your Hemis ID and password"
 #: .\accounts\templates\signup.html:67
 msgid "Hisobingiz bormi"
 msgstr "Have an account"
+
+#: .\accounts\views.py:30
+msgid "username yoki parol xato!"
+msgstr "username or password error!"
+
+#: .\accounts\views.py:52
+msgid "Bunday foydalanuvchi allaqachon mavjud!"
+msgstr "Such a user already exists!"
+
+#: .\accounts\views.py:55
+msgid "id yoki parol xato! Iltimos tekshirib qaytadan kiriting."
+msgstr "wrong id or password! Please check and re-enter."
+
+#: .\accounts\views.py:97
+msgid "Ma'lumot muvaffaqqiyatli o'zgartirildi."
+msgstr "The information has been changed successfully."
 
 #: .\config\settings.py:130
 msgid "Uzbek"
@@ -368,6 +389,14 @@ msgstr "To whom"
 msgid "Yuborilgan vaqti"
 msgstr "Sent time"
 
+#: .\main\views.py:53
+msgid "Murojaat muvaffaqqiyatli yuborildi."
+msgstr "The request was sent successfully."
+
+#: .\main\views.py:107
+msgid "Javob muvaffaqqiyatli saqlandi."
+msgstr "Answer saved successfully."
+
 #: .\templates\home.html:10 .\templates\home.html:50
 #: .\templates\includes\left.html:5
 msgid "Interaktiv xizmatlar"
@@ -477,7 +506,9 @@ msgstr "Urgut Branch of Samarkand State University"
 msgid ""
 "Sayt materiallaridan to'liq yoki qisman foydalanilganda ushbu manbani "
 "ko'rsatish majburiydir"
-msgstr "When using the site materials in whole or in part, it is mandatory to indicate this source"
+msgstr ""
+"When using the site materials in whole or in part, it is mandatory to "
+"indicate this source"
 
 #: .\templates\includes\footer.html:90
 msgid "Diqqat"
@@ -487,7 +518,9 @@ msgstr "Attention"
 msgid ""
 "Agar matnda xato topsangiz, uni tanlang va ma'muriyatni xabardor qilish "
 "uchun Ctrl + Enter tugmalarini bosing"
-msgstr "If you find an error in the text, select it and press Ctrl + Enter to notify the administration"
+msgstr ""
+"If you find an error in the text, select it and press Ctrl + Enter to notify "
+"the administration"
 
 #: .\templates\includes\header.html:56
 msgid "Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali"

@@ -9,9 +9,7 @@ from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .permissions import CustomLoginRequiredMixin
-
-
-
+from django.utils.translation import gettext_lazy as _
 
 class LoginView(View):
     def get(self, request):
@@ -29,7 +27,7 @@ class LoginView(View):
                 login(request, user)
                 return redirect('home')
         else:
-            messages.info(request, "username or password error!")
+            messages.info(request, _("username yoki parol xato!"))
             return render(request, 'signin.html', {'form': form})
         
 class LogoutView(LoginRequiredMixin, View):
@@ -51,10 +49,10 @@ class StudentRegisterView(View, HemisApi):
         student = Student.objects.filter(username=username)
         err = self.user_data_json(username, password)
         if student.exists() and err != 'error':
-            messages.error(request, 'This user already exis!')
+            messages.error(request, _('Bunday foydalanuvchi allaqachon mavjud!'))
             return redirect('student_register')
         if self.user_data_json(username, password) == 'error':
-            messages.error(request, "id yoki parol xato! Iltimos tekshirib qaytadan kiriting.")
+            messages.error(request, _("id yoki parol xato! Iltimos tekshirib qaytadan kiriting."))
             return redirect('student_register')
         else:
             if form.is_valid():
@@ -96,7 +94,7 @@ class LeaderProfileView(CustomLoginRequiredMixin, View):
         form = LeaderProfileUpdateForm(data=request.POST, instance=leader)
         if form.is_valid():
             form.save()
-            messages.success(request, "Data changed successfully.")
+            messages.success(request, _("Ma'lumot muvaffaqqiyatli o'zgartirildi."))
             return redirect('profile_leader')
         else:
             context = {
@@ -116,9 +114,12 @@ class PasswordChangeView(CustomLoginRequiredMixin, View):
         form = CustomPasswordChangeForm(user=request.user, data=request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('password_change_done')
         else:
             context = {
                 'form':form
             }
             return render(request, 'password_change.html', context)
+        
+def password_change_done(request):
+    return render(request, 'password_change_done.html')

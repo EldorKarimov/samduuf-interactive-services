@@ -7,7 +7,7 @@ from .models import Leader, Appeal, Answer
 from .forms import AppealForm, AnswerForm
 from accounts.permissions import CustomLoginRequiredMixin, CustomStudentLoginRequiredMixin
 from django.contrib import messages
-from accounts.api import HemisApi
+from django.utils.translation import gettext_lazy as _
 
 def custom_403(request, exeption):
     return render(request, '403.html', status=403)
@@ -50,7 +50,7 @@ class AppealToLeaderView(CustomStudentLoginRequiredMixin, View):
             form_create = form.save(commit=False)
             form_create.student = request.user
             form_create.save()
-            messages.success(request, "Murojaat muvaffaqqiyatli yuborildi.")
+            messages.success(request, _("Murojaat muvaffaqqiyatli yuborildi."))
             return redirect('appeal_to_leader')
         else:
             context = {
@@ -104,7 +104,7 @@ class AppealListDetailView(CustomLoginRequiredMixin, View):
             form_create.leader = str(request.user.first_name) + str(request.user.last_name)
             form_create.student_id = appeal.student.student_id_number
             form_create.save()
-            messages.success(request, "Javob muvaffaqqiyatli saqlandi.")
+            messages.success(request, _("Javob muvaffaqqiyatli saqlandi."))
             return redirect('appeal_list')
         else:
             form = AnswerForm(data=request.POST)

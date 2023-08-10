@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-10 11:37+0500\n"
+"POT-Creation-Date: 2023-08-10 14:51+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -152,6 +152,16 @@ msgstr "зменить пароль"
 msgid "Saqlash"
 msgstr "Сохранять"
 
+#: .\accounts\templates\password_change_done.html:14
+msgid "Parol muvaffaqqiyatli o'zgartirildi."
+msgstr "Пароль успешно изменен."
+
+#: .\accounts\templates\password_change_done.html:17
+#: .\accounts\templates\signin.html:68 .\accounts\templates\signup.html:68
+#: .\templates\includes\header.html:137
+msgid "Tizimga kirish"
+msgstr "Авторизоваться"
+
 #: .\accounts\templates\profile-data.html:4 .\templates\includes\left.html:11
 msgid "Mening ma'lumotlarim"
 msgstr "Моя информация"
@@ -180,11 +190,6 @@ msgstr "Пароль"
 msgid "Mening eslab qoling"
 msgstr "Запомнить меня"
 
-#: .\accounts\templates\signin.html:68 .\accounts\templates\signup.html:68
-#: .\templates\includes\header.html:137
-msgid "Tizimga kirish"
-msgstr "Авторизоваться"
-
 #: .\accounts\templates\signin.html:80
 msgid "Hisobingiz yo'qmi"
 msgstr "Нет учетной записи"
@@ -204,6 +209,22 @@ msgstr "Вы будете зарегистрированы, используя �
 #: .\accounts\templates\signup.html:67
 msgid "Hisobingiz bormi"
 msgstr "Иметь аккаунт"
+
+#: .\accounts\views.py:30
+msgid "username yoki parol xato!"
+msgstr "неправильное имя пользователя или пароль!"
+
+#: .\accounts\views.py:52
+msgid "Bunday foydalanuvchi allaqachon mavjud!"
+msgstr "Такой пользователь уже существует!"
+
+#: .\accounts\views.py:55
+msgid "id yoki parol xato! Iltimos tekshirib qaytadan kiriting."
+msgstr "ошибка идентификатора или пароля! Пожалуйста, проверьте и введите снова."
+
+#: .\accounts\views.py:97
+msgid "Ma'lumot muvaffaqqiyatli o'zgartirildi."
+msgstr "Информация успешно изменена."
 
 #: .\config\settings.py:130
 msgid "Uzbek"
@@ -378,6 +399,14 @@ msgstr "Кому"
 msgid "Yuborilgan vaqti"
 msgstr "Время отправки"
 
+#: .\main\views.py:53
+msgid "Murojaat muvaffaqqiyatli yuborildi."
+msgstr "Запрос успешно отправлен."
+
+#: .\main\views.py:107
+msgid "Javob muvaffaqqiyatli saqlandi."
+msgstr "Ответ успешно сохранен."
+
 #: .\templates\home.html:10 .\templates\home.html:50
 #: .\templates\includes\left.html:5
 msgid "Interaktiv xizmatlar"
@@ -483,12 +512,13 @@ msgstr "Наш адрес"
 msgid "Samarqand davlat universiteti Urgut filiali"
 msgstr "Ургутский филиал Самаркандского государственного университета"
 
-
 #: .\templates\includes\footer.html:89
 msgid ""
 "Sayt materiallaridan to'liq yoki qisman foydalanilganda ushbu manbani "
 "ko'rsatish majburiydir"
-msgstr "При использовании материалов сайта полностью или частично обязательно указание этого источника"
+msgstr ""
+"При использовании материалов сайта полностью или частично обязательно "
+"указание этого источника"
 
 #: .\templates\includes\footer.html:90
 msgid "Diqqat"
@@ -498,7 +528,9 @@ msgstr "Внимание"
 msgid ""
 "Agar matnda xato topsangiz, uni tanlang va ma'muriyatni xabardor qilish "
 "uchun Ctrl + Enter tugmalarini bosing"
-msgstr "Если вы нашли ошибку в тексте, выделите ее и нажмите Ctrl+Enter, чтобы сообщить об этом администрации"
+msgstr ""
+"Если вы нашли ошибку в тексте, выделите ее и нажмите Ctrl+Enter, чтобы "
+"сообщить об этом администрации"
 
 #: .\templates\includes\header.html:56
 msgid "Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali"
