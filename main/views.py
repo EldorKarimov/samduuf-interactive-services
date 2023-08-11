@@ -69,7 +69,7 @@ class MyApplicationView(CustomStudentLoginRequiredMixin, View):
     
 class MyAnswerView(CustomStudentLoginRequiredMixin, View):
     def get(self, request):
-        answers = Answer.objects.filter(student_id=request.user.username)
+        answers = Answer.objects.filter(student_id=request.user.username).order_by('-pk')[:5]
         context = {
             'answers':answers
         }
