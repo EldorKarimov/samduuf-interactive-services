@@ -16,9 +16,6 @@ class Leader(models.Model):
     def __str__(self):
         return f"{self.leader.first_name} {self.leader.last_name}"
     
-    def get_full_name(self):
-        return f"{leader.leader.first_name} {leader.leader.last_name} {leader.leader.third_name}"
-    
 
 class Appeal(models.Model):
     TYPE_APPLICATION = (
