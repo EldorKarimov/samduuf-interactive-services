@@ -2,6 +2,8 @@
 {% load widget_tweaks %}
 {% load i18n %}
 
+{% block title %} Appeal To Leader {% endblock %}
+
 {% block content %}
 <main class="container">
     <div class="row">
@@ -24,7 +26,7 @@
                             <div class="appeal-leaders__details">
                                 <h2 class="appeal-leaders__full-name">{{ leader.leader.get_full_name }}</h2>
                                 <p class="appeal-leaders__position">{{ leader.position }}</p>
-                                <p><i class="fa-solid fa-phone-volume"></i>{{ leader.phone }}</p>
+                                <p><i class="fa-solid fa-phone-volume"></i>{{ leader.leader.phone }}</p>
                                 <a href="{{ leader.detail_link }}">{% trans "Batafsil" %}</a>
                             </div>
                         </div>

@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% load static %}
-
+{% block title %} Homepage {% endblock %}
 {% block content %}
 <main class="container">
   <div class="main-section-subtitle">
@@ -14,36 +14,49 @@
       {% trans "foydalanishingiz mumkin." %}</p>
   </div>
   <div class="main-section__cards">
+    <a href="{% url 'appeal_to_leader' %}">
     <div class="main-section__card">
       <h1 class="card-icon"><i class="fa-regular fa-user"></i></h1>
-      <h3 class="card-title"><a href="{% url 'appeal_to_leader' %}" target="_blank">{% trans "Rahbarlarga Murojaat" %}</a></h3>
+      <h3 class="card-title">{% trans "Rahbarlarga Murojaat" %}</h3>
       <p class="card-description">{% trans "Taklif va shikoyatlaringizni yuboring" %}.</p>
     </div>
+  </a>
+  <a href="https://kutubxona.samduuf.uz/" target="_blank">
     <div class="main-section__card">
       <h1 class="card-icon"><i class="fa-solid fa-book-open-reader"></i></h1>
-      <h3 class="card-title"><a href="https://kutubxona.samduuf.uz/" target="_blank">{% trans "Elektron kutubxona" %}</a></h3>
+      <h3 class="card-title">{% trans "Elektron kutubxona" %}</h3>
       <p class="card-description">{% trans "Onlayn kutubxonadan foydalanish" %}.</p>
     </div>
+  </a>
+  <a href="https://my.mehnat.uz/login" target="_blank">
     <div class="main-section__card">
       <h1 class="card-icon"><i class="fa-solid fa-circle-info"></i></h1>
-      <h3 class="card-title"><a href="https://my.mehnat.uz/login" target="_blank">{% trans "Ma'lumotnoma olish" %}</a></h3>
+      <h3 class="card-title">{% trans "Ma'lumotnoma olish" %}</h3>
       <p class="card-description">{% trans "Xodimlar uchun ish joyi ma'lumotini oling" %}.</p>
     </div>
+  </a>
+  <a href="https://student.samduuf.uz/dashboard/diploma" target="_blank">
     <div class="main-section__card">
       <h1 class="card-icon"><i class="fa-solid fa-check-double"></i></h1>
-      <h3 class="card-title"><a href="https://student.samduuf.uz/dashboard/diploma" target="_blank">{% trans "Diplomni tekshirish (Talabalar)" %}</a></h3>
+      <h3 class="card-title">{% trans "Diplomni tekshirish (Talabalar)" %}</h3>
       <p class="card-description">{% trans "Talabalar uchun diplom tekshirish tizimi" %}.</p>
     </div>
+  </a>
+  <a href="https://student.samduuf.uz/dashboard/contract" target="_blank">
     <div class="main-section__card">
       <h1 class="card-icon"><i class="fa-regular fa-file-lines"></i></h1>
-      <h3 class="card-title"><a href="https://student.samduuf.uz/dashboard/contract" target="_blank">{% trans "Shartnoma olish (Talabalar)" %}</a></h3>
+      <h3 class="card-title">{% trans "Shartnoma olish (Talabalar)" %}</h3>
       <p class="card-description">{% trans "Talabalar uchun shartnoma olish tizimi" %}.</p>
     </div>
-    <div class="main-section__card">
-      <h1 class="card-icon"><i class="fa-regular fa-file-lines"></i></h1>
-      <h3 class="card-title"><a href="#">{% trans "Yotoqxonaga ariza berish" %}</a></h3>
-      <p class="card-description">{% trans "Yotoqxonaga online ariza berish" %}.</p>
-    </div>
+  </a>
+    <a href="#">
+      <div class="main-section__card">
+        <h1 class="card-icon"><i class="fa-regular fa-file-lines"></i></h1>
+        <h3 class="card-title">{% trans "Yotoqxonaga ariza berish" %}</h3>
+        <p class="card-description">{% trans "Yotoqxonaga online ariza berish" %}.</p>
+      </div>
+    </a>
+    
   </div>
 
   <div class="statistics">
