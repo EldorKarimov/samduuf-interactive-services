@@ -91,6 +91,8 @@ class AppealListDetailView(CustomLoginRequiredMixin, View):
         else:
             form = AnswerForm()
             appeal_student = Appeal.objects.get(id=appeal_id)
+            appeal_student.is_viewed = True
+            appeal_student.save()
             context = {
                 'form':form,
                 'appeal_student':appeal_student

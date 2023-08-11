@@ -16,6 +16,9 @@ class Leader(models.Model):
     def __str__(self):
         return f"{self.leader.first_name} {self.leader.last_name}"
     
+    def get_full_name(self):
+        return f"{leader.leader.first_name} {leader.leader.last_name} {leader.leader.third_name}"
+    
 
 class Appeal(models.Model):
     TYPE_APPLICATION = (
@@ -33,6 +36,7 @@ class Appeal(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_checked = models.BooleanField(default=False)
+    is_viewed = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.leader.leader.first_name} {self.leader.leader.last_name}"
