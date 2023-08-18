@@ -37,11 +37,13 @@ class Appeal(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     is_checked = models.BooleanField(default=False)
     is_viewed = models.BooleanField(default=False)
+    is_answered = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.leader.leader.first_name} {self.leader.leader.last_name}"
     
 class Answer(models.Model):
+    appeal = models.OneToOneField(Appeal, on_delete=models.CASCADE)
     message = models.TextField()
     student_id = models.CharField(max_length=15)
     leader = models.CharField(max_length=128)

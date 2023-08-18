@@ -102,12 +102,22 @@ class AppealListDetailView(CustomLoginRequiredMixin, View):
         form = AnswerForm(data=request.POST)
         if form.is_valid():
             appeal = get_object_or_404(Appeal, id=appeal_id)
-            form_create = form.save(commit=False)
-            form_create.leader = str(request.user.first_name) + str(request.user.last_name)
-            form_create.student_id = appeal.student.student_id_number
-            form_create.save()
-            messages.success(request, _("Javob muvaffaqqiyatli saqlandi."))
-            return redirect('appeal_list')
+            appeal.is_answered = True
+            appeal.save()
+            answer = Answer.objects.filter(appeal=appeal).exists()
+            if answer:
+                messages.error(request, "siz avval bu talabaga javob yo'llagansiz!")
+                return redirect('appeal_detail', appeal.id)
+            else:
+                form_create = form.save(commit=False)
+                form_create.appeal = appeal
+                form_create.leader = str(request.user.first_name) + str(request.user.last_name)
+                form_create.student_id = appeal.student.student_id_number
+                appeal.is_answered = True
+                form_create.save()
+                
+                messages.success(request, _("Javob muvaffaqqiyatli saqlandi."))
+                return redirect('appeal_list')
         else:
             form = AnswerForm(data=request.POST)
             context = {

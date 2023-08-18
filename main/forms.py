@@ -13,4 +13,4 @@ class AppealForm(forms.ModelForm):
 class AnswerForm(forms.ModelForm):
     class Meta:
         model = Answer
-        exclude = ['leader', 'student_id']
+        exclude = ['appeal', 'leader', 'student_id']
