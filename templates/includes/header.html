@@ -1,145 +1,55 @@
+{% load static %}
 {% load i18n %}
-<!-- Header  -->
-<div class="top">
-    <nav>
-        <div class="p-0 d-flex justify-content-between align-items-center m-0 px-4">
-            <ul class="m-0 d-flex justify-content-between align-items-center topbar">
-                <li>
-                    <a href="/page/gerb-13-02-2023">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Emblem_of_Uzbekistan.svg/200px-Emblem_of_Uzbekistan.svg.png"
-                            alt="111">
-                    </a>
-                </li>
-                <li>
-                    <a href="/page/bayroq-13-02-2023">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/330px-Flag_of_Uzbekistan.svg.png"
-                            alt="111">
-                    </a>
-                </li>
-                <li>
-                    <a href="/page/madhiya-13-02-2023">
-                        <img src="https://www.samdu.uz/images/anthem.png" alt="111">
-                    </a>
-                </li>
-            </ul>
-            <ul class="d-flex justify-content-between align-items-center m-0">
-                <li class="p-2"><a href="https://student.samduuf.uz/">Hemis student</a></li>
-                <li class="p-2"><a href="https://hemis.samduuf.uz/">Hemis OTM</a></li>
-                <li class="p-2">
-                    
-                    
-                        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                            <input name="next" type="hidden" value="{{ redirect_to }}">
-                            <select name="language">
-                                {% get_current_language as LANGUAGE_CODE %}
-                                {% get_available_languages as LANGUAGES %}
-                                {% get_language_info_list for LANGUAGES as languages %}
-                                {% for language in languages %}
-                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                                        {{ language.name_local }} ({{ language.code }})
-                                    </option>
-                                {% endfor %}
-                            </select>
-                            <input type="submit" value="Go">
-                        </form>
-                </li>
-            </ul>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a href="{% url 'home' %}">
+        <div class="brand">
+            <img src="{% static 'images/logo.png' %}" alt="logo" class="brand__image">
+            <p class="brand__info">{% trans "Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali" %}</p>
         </div>
-    </nav>
-</div>
-<header id="top-navbar" class="header w-100" style="background-color: white;">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid justify-content-between">
-            <a class="navbar-brand p-0 d-flex align-items-center" href="/">
-                <img width="70px" src="https://samduuf.uz/frontend/img/Logo/Logo.png" alt="logo">
-                <h2 class="d-none d-lg-block mb-0 ">
-                    <p class="mb-0 ms-2 ">{% trans "Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali" %}</p>
-                </h2>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">{% trans "Bosh sahifa" %}</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {% trans "Interaktiv xizmatlar" %}
             </a>
-            <button id="callapse" class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-                <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
-                    {% if request.user.is_superuser %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'appeal_list' %}">{% trans "Murojaatlar ro'yhati" %}</a>
-                    </li>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'appeal_to_leader' %}">{% trans "Rahbarlarga Murojaat" %}</a></li>
+              <li><a class="dropdown-item" href="https://student.samduuf.uz/dashboard/diploma" target="_blank">{% trans "Dimlomni tekshirish (talabalar)" %}</a></li>
+              <li><a class="dropdown-item" href="https://student.samduuf.uz/dashboard/contract" target="_blank">{% trans "Shartnoma olish" %}</a></li>
+              <li><a class="dropdown-item" href="#">{% trans "Ma'lumotnoma olish" %}</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">{% trans "Biz haqimizda" %}</a>
+          </li>
+          <!-- <li class="nav-item nav-item__lang">
 
-                    {% else %}
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'home' %}">{% trans "Bosh sahifa" %}</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'all_services' %}">{% trans "Interaktiv Xizmatlar "%}
-                            <svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path
-                                    d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
-                            </svg>
-                        </a>
-                        <ul class="drop-down px-0 py-2">
-                            <li class="px-3"><a
-                                    href="{% url 'appeal_to_leader' %}">{% trans "Rahbarlarga Murojaat" %}</a>
-                            </li>
-                            <li class="px-3"><a
-                                href="https://student.samduuf.uz/dashboard/diploma" target="_blank">{% trans "Dimlomni tekshirish (talabalar)" %}</a>
-                            </li>
-                            <li class="px-3"><a
-                                href="https://student.samduuf.uz/dashboard/contract" target="_blank">{% trans "Shartnoma olish" %}</a>
-                            </li>
-                            <li class="px-3"><a
-                                href="https://my.mehnat.uz/login" target="_blank">{% trans "Ma&#039;lumotnoma olish" %}</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">{% trans "Biz haqimizda" %}</a>
-                    </li>
-
-                    {% endif %}
-
-                    
-
-
-                    {% if user.is_authenticated %}
-                    <!-- <li class="nav-item nav-item__login">
-                        <a href="#">{{ request.user.first_name }} {{ request.user.last_name }}</a>
-                    </li> -->
-                    <li class="nav-item nav-item__login">
-                        <a class="nav-link" href="#">{{ request.user.first_name }} {{ request.user.last_name }}
-                            <svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path
-                                    d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
-                            </svg>
-                        </a>
-                        <ul class="drop-down px-0 py-2">
-                            {% if request.user.is_superuser %}
-                            <li class="px-3"><a
-                                href="{% url 'profile_leader' %}">{% trans "Profil" %}</a>
-                            </li>
-                            {% else %}
-                            <li class="px-3"><a
-                                href="{% url 'profile_data' %}">{% trans "Profil" %}</a>
-                            </li>
-                            {% endif %}
-                            <li class="px-3"><a
-                                    href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket me-2"></i>{% trans "Tizimdan chiqish" %}</a>
-                            </li>
-                        </ul>
-                    </li>
-                    {% else %}
-                    <li class="nav-item nav-item__login">
-                        <a href="{% url 'login' %}" class="btn btn-outline-primary"> <i class="fa-solid fa-arrow-right-to-bracket me-2"></i>{% trans "Tizimga kirish" %}</a>
-                    </li>
-                    {% endif %}
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header><!-- Header end -->
+                
+          </li> -->
+        </ul>
+        <form action="{% url 'set_language' %}" method="post" class="me-2">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ redirect_to }}">
+            <select name="language" onchange="this.form.submit()" class="form-select" aria-label="Default select example">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                        {{ language.name_local }} ({{ language.code }})
+                    </option>
+                {% endfor %}
+            </select>
+        </form>
+          <a class="btn btn-outline-success me-5" type="submit"><i class="fa-regular fa-user me-2"></i>{% trans "Tizimga kirish" %}</a>
+      </div>
+    </div>
+  </nav>

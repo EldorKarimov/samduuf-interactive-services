@@ -52,125 +52,58 @@ h5 {
 .bg-gray {
     background-color: var(--bg-gray);
 }
-
-/* header uchun stillar */
-.header {
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    z-index: 50;
+/* header section styles */
+.navbar {
+    box-shadow: 0 4px 2px -2px rgb(224, 219, 219);
 }
-
-.top {
-    background-color: var(--link-color);
-    color: #fff;
-    font-family: "Open sans", sans-serif !important;
+.brand {
+    padding: 0;
+    padding-right: 3rem;
+    margin: 0;
+}
+.brand__image {
+    width: 70px;
+    vertical-align: middle;
+}
+.brand__info {
     font-size: 14px;
-}
-
-.top .dropdown button {
-    font-family: inherit;
-    color: #fff !important;
-    border: none !important;
-}
-
-#navbar {
-    background-color: #333;
-    /* Black background color */
-    position: fixed;
-    /* Make it stick/fixed */
-    top: -150px;
-    /* Hide the navbar 50 px outside of the top view */
-    width: 100%;
-    /* Full width */
-    transition: top 0.3s;
-    /* Transition effect when sliding down (and up) */
-}
-
-#top-navbar {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.topbar li {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 15px;
-}
-
-.topbar li img {
-    height: 100%;
-    position: relative;
-    /* bottom: 2px; */
-}
-
-.top .show {
-    border: none !important;
-}
-
-.header .navbar-brand h2 {
-    font-family: "Poppins", sans-serif;
-    white-space: initial !important;
-    font-weight: 700 !important;
     display: inline-block;
-    width: 250px;
-    font-size: 16px;
+    vertical-align: middle;
+    width: 220px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown {
+    color: black;
+    font-weight: 500;
 }
 
-.header .navbar-collapse a {
-    color: var(--link-color) !important;
-    font-weight: 700;
-    font-family: "Poppins", sans-serif;
+.nav-item__lang {
+    margin-left: 300px;
+    vertical-align: middle;
 }
 
-.header .navbar-nav>li {
-    position: relative;
+@media only screen and (max-width: 430px){
+    .brand {
+        display: none;
+    }
+
+    .nav-item__lang {
+        margin-left: 0;
+        width: 10px;
+        margin-bottom: 15px;
+    }
 }
 
-.header svg {
-    width: 10px;
-}
-
-.header path {
-    fill: var(--link-color);
-}
-
-.nav-item__login {
-    margin-left: 500px;
-}
-
-.header .nav-item:hover>.drop-down {
-    opacity: 1;
-    pointer-events: all;
-    transition: all 0.3s ease;
-    transform: translateY(0);
-}
-
-.header .drop-down {
-    transform: translateY(-15px);
-    opacity: 0;
-    z-index: 500;
-    pointer-events: none;
-    background-color: #fff;
-    position: absolute;
-    white-space: nowrap;
-    box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
-}
-
-.header .drop-down li {
-    padding: 7px 0;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.header .drop-down li:hover>a {
-    color: #0ea2bd !important;
-}
-
-.header .drop-down>li:hover .deep-drop-down {
-    transform: translateX(0);
-    opacity: 1;
-    pointer-events: all;
+@media only screen and (max-width: 844px){
+    .nav-item__lang {
+        margin-left: 0;
+        width: 20%;
+        margin-bottom: 15px;
+    }
 }
 
 .deep-drop-down {
@@ -225,11 +158,11 @@ h5 {
 }
 
 .main-section__card:hover {
-    background-color: #7694ef;
+    background-color: #3661e1;
 }
 
 .main-section__card:hover .card-icon,
-.main-section__card:hover .card-title,
+.main-section__card:hover a,
 .main-section__card:hover .card-description  {
     color: white;
 }
@@ -548,4 +481,44 @@ h5 {
     width: 80px !important;
     height: 31px !important;
     object-fit: cover;
+}
+
+@media only screen and (max-width:576px){
+    .statistics-card {
+        width: 100%;
+    }
+    .statistics__title {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .main-section__card {
+        width: 100%;
+    }
+
+    .statistics-card {
+        width: 47%;
+        margin-right: 2.5%;
+    }
+    .statistics__title {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width:992px){
+    .main-section__card {
+        width: 48%;
+        margin-right: 1.9%;
+        float: left;
+        display: inline-block;
+    }
+
+    .statistics-card {
+        width: 47%;
+        margin-right: 2.5%;
+    }
+    .statistics__title {
+        font-size: 2rem;
+    }
 }
