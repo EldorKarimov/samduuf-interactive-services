@@ -28,6 +28,7 @@ class Student(AbstractUser):
     gender = models.CharField(max_length=10, null=True, blank=True)
     country = models.CharField(max_length=50, null=True, blank=True)
     is_student = models.BooleanField(default=True)
+    is_leader = models.BooleanField(default=False)
 
 
 

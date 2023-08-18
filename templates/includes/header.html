@@ -13,6 +13,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          {% if request.user.is_leader %}
+          <li class="nav-item">
+            <a href="{% url 'appeal_list' %}">{% trans "Murojaatlar ro'yhati" %}</a>
+          </li>
+          {% else %}
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">{% trans "Bosh sahifa" %}</a>
           </li>
@@ -22,14 +27,16 @@
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{% url 'appeal_to_leader' %}">{% trans "Rahbarlarga Murojaat" %}</a></li>
+              <li><a class="dropdown-item" href="{% url 'appeal_to_leader' %}">{% trans "Elektron kutubxona" %}</a></li>
               <li><a class="dropdown-item" href="https://student.samduuf.uz/dashboard/diploma" target="_blank">{% trans "Dimlomni tekshirish (talabalar)" %}</a></li>
               <li><a class="dropdown-item" href="https://student.samduuf.uz/dashboard/contract" target="_blank">{% trans "Shartnoma olish" %}</a></li>
-              <li><a class="dropdown-item" href="#">{% trans "Ma'lumotnoma olish" %}</a></li>
+              <li><a class="dropdown-item" href="https://my.mehnat.uz/login" target="_blank">{% trans "Ma'lumotnoma olish" %}</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">{% trans "Biz haqimizda" %}</a>
           </li>
+          {% endif %}
           <!-- <li class="nav-item nav-item__lang">
 
                 
@@ -49,7 +56,25 @@
                 {% endfor %}
             </select>
         </form>
-          <a class="btn btn-outline-success me-5" type="submit"><i class="fa-regular fa-user me-2"></i>{% trans "Tizimga kirish" %}</a>
+        {% if request.user.is_authenticated %}
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ request.user.first_name }} {{ request.user.last_name }}
+          </button>
+          <ul class="dropdown-menu">
+            {% if request.user.is_leader %}
+            <li><a class="dropdown-item" href="{% url 'profile_leader' %}">{% trans "Profil" %}</a></li>
+            {% else %}
+            <li><a class="dropdown-item" href="{% url 'profile_data' %}">{% trans "Profil" %}</a></li>
+            {% endif %}
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'logout' %}">{% trans "Tizimdan chiqish" %}</a></li>
+            
+          </ul>
+        </div>
+        {% else %}
+          <a href="{% url 'login' %}" class="btn btn-outline-success me-5"><i class="fa-regular fa-user me-2"></i>{% trans "Tizimga kirish" %}</a>
+        {% endif %}
       </div>
     </div>
   </nav>
