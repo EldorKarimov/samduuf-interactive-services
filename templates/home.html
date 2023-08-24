@@ -4,16 +4,27 @@
 {% load static %}
 {% block title %} Homepage {% endblock %}
 {% block content %}
-<main class="container">
-  <div class="main-section-subtitle">
-    <h3 class="main-section-subtitle__title">
-      {% trans "Interaktiv xizmatlar" %}
-    </h3>
-    <p class="main-section-subtitle__description">{% trans "Quyidagi" %} <span class="description-span">{% trans "interaktiv xizmatlar" %}</span>
-      {% trans "bilan siz bizning xizmatlarimizdan masofadan turib" %} <br>
-      {% trans "foydalanishingiz mumkin." %}</p>
+
+<main>
+  <div class="top-bg">
+    <div class="main-section-subtitle container" data-aos="fade-down">
+      <div class="row">
+        <div class="col-lg-9">
+          <h3 class="main-section-subtitle__title">
+            {% trans "Interaktiv xizmatlar" %}
+          </h3>
+          <p class="main-section-subtitle__description">{% trans "Quyidagi" %} <span class="description-span">{% trans "interaktiv xizmatlar" %}</span>
+            {% trans "bilan siz bizning xizmatlarimizdan masofadan turib" %} <br>
+            {% trans "foydalanishingiz mumkin." %}</p>
+        </div>
+        <div class="col-lg-3">
+          <img src="{% static 'images/interactive-image.png' %}" alt="interactive image" class="interactive-image">
+        </div>
+        </div>
+      </div>
+      
   </div>
-  <div class="main-section__cards">
+  <div class="main-section__cards container" data-aos="fade-up">
     <a href="{% url 'appeal_to_leader' %}">
     <div class="main-section__card">
       <h1 class="card-icon"><i class="fa-regular fa-user"></i></h1>
@@ -58,31 +69,72 @@
     </a>
     
   </div>
-
-  <div class="statistics">
-    <h2 class="statistics__title">{% trans "Interaktiv xizmatlar" %} <span style="color: #2f55d4;">{% trans "Statistikasi" %}</span></h2>
-    <div class="statistics__cards">
-      <div class="statistics-card">
-        <img src="{% static 'images/Asset190.svg' %}" alt="statistics image" class="statistics-card__image">
-        <h4 class="statistics-card__number mt-4">{{ appeal_count }}</h4>
-        <p class="statistics-card__description">{% trans "Kelib tushgan murojaatlar" %}</p>
-      </div>
-      <div class="statistics-card">
-        <img src="{% static 'images/Asset189.svg' %}" alt="statistics image" class="statistics-card__image">
-        <h4 class="statistics-card__number mt-4">{{ answer_count }}</h4>
-        <p class="statistics-card__description">{% trans "Javob berilgan murojaatlar" %}</p>
-      </div>
-      <div class="statistics-card">
-        <img src="{% static 'images/Asset186.svg' %}" alt="statistics image" class="statistics-card__image">
-        <h4 class="statistics-card__number mt-4">{{ appeal_in_process }}</h4>
-        <p class="statistics-card__description">{% trans "Jarayondagi murojaatlar" %}</p>
-      </div>
-      <div class="statistics-card">
-        <img src="{% static 'images/Asset187.svg' %}" alt="statistics image" class="statistics-card__image">
-        <h4 class="statistics-card__number mt-4">77%</h4>
-        <p class="statistics-card__description">{% trans "Boshqa" %}</p>
+  <!-- statistics -->
+  <div class="statistics-bg">
+    <div class="statistics container" data-aos="fade-up">
+      <h2 class="statistics__title">{% trans "Interaktiv xizmatlar" %} <span style="color: #2f55d4;">{% trans "Statistikasi" %}</span></h2>
+      <div class="statistics__cards" data-aos="fade-up">
+        <div class="statistics-card">
+          <img src="{% static 'images/Asset190.svg' %}" alt="statistics image" class="statistics-card__image">
+          <h4 class="statistics-card__number mt-4">{{ appeal_count }}</h4>
+          <p class="statistics-card__description">{% trans "Kelib tushgan murojaatlar" %}</p>
+        </div>
+        <div class="statistics-card">
+          <img src="{% static 'images/Asset189.svg' %}" alt="statistics image" class="statistics-card__image">
+          <h4 class="statistics-card__number mt-4">{{ answer_count }}</h4>
+          <p class="statistics-card__description">{% trans "Javob berilgan murojaatlar" %}</p>
+        </div>
+        <div class="statistics-card">
+          <img src="{% static 'images/Asset186.svg' %}" alt="statistics image" class="statistics-card__image">
+          <h4 class="statistics-card__number mt-4">{{ appeal_in_process }}</h4>
+          <p class="statistics-card__description">{% trans "Jarayondagi murojaatlar" %}</p>
+        </div>
+        <div class="statistics-card">
+          <img src="{% static 'images/Asset187.svg' %}" alt="statistics image" class="statistics-card__image">
+          <h4 class="statistics-card__number mt-4">77%</h4>
+          <p class="statistics-card__description">{% trans "Boshqa" %}</p>
+        </div>
       </div>
     </div>
   </div>
+  
+  <!-- end statistics -->
+  <!-- rent house section -->
+  
+
 </main>
+<div class="rent-house-bg">
+  <div class="rent-house container" data-aos="fade-up">
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="{% static 'images/ren-house.png' %}" alt="rent house image" class="rent-house__image">
+      </div>
+      <div class="col-lg-6">
+        <h3 class="rent-house__title">
+          {% trans "Ijara uylari" %}
+        </h3>
+        <h4 class="rent-house__subtitle">
+          Samduuf talabalari uchun mo'ljallangan ijara xonadonlar ro'yxati
+        </h4>
+        <ul class="rent-house__info">
+          <li><i class="fa-solid fa-circle-check me-1"></i>{% trans "Icharaga beruvchining F.I.SH" %}</li>
+          <li><i class="fa-solid fa-circle-check me-1"></i>{% trans "Telefon raqami" %}</li>
+          <li><i class="fa-solid fa-circle-check me-1"></i>{% trans "Ijara xonadonining bir oylik narxi" %}</li>
+        </ul>
+        <div class="rent-house__read-more">
+          <div class="row">
+            <div class="col-lg-3">
+              <img src="{% static 'images/rent-house-qr.jpg' %}" alt="QR" class="rent-house-qr">
+            </div>
+            <div class="col-lg-6">
+              <a href="https://samduuf.uz/lfm/files/2/SamDUUF%20%20yangi%20ijara%20xonadonlar%2012.08.2023.pdf" target="_blank" class="btn btn-outline-primary">{% trans "Batafsil" %}</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}

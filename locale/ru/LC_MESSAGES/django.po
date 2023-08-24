@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-10 14:51+0500\n"
+"POT-Creation-Date: 2023-08-24 10:58+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,8 +46,11 @@ msgstr ""
 "похож на вашу личную информацию, не может быть широко используемым паролем и "
 "не может быть полностью числовым."
 
-#: .\accounts\templates\edu-data.html:4 .\accounts\templates\edu-data.html:12
-#: .\templates\includes\left.html:15
+#: .\accounts\templates\edu-data.html:4
+msgid "Edu Data"
+msgstr ""
+
+#: .\accounts\templates\edu-data.html:12 .\templates\includes\left.html:15
 msgid "Ta'lim ma'lumotlari"
 msgstr "Образовательная информация"
 
@@ -110,7 +113,7 @@ msgstr "Пол"
 
 #: .\accounts\templates\leader_profile.html:38
 #: .\accounts\templates\profile-data.html:29
-#: .\main\templates\appeal_detail.html:19 .\main\templates\appeal_list.html:23
+#: .\main\templates\appeal_detail.html:27 .\main\templates\appeal_list.html:23
 msgid "Elektron pochta"
 msgstr "Электронная почта"
 
@@ -125,7 +128,7 @@ msgid "Tug'ilgan sana"
 msgstr "Дата рождения"
 
 #: .\accounts\templates\leader_profile.html:55
-#: .\accounts\templates\profile-data.html:43
+#: .\accounts\templates\profile-data.html:43 .\templates\home.html:121
 #, fuzzy
 #| msgid "Telefon raqam"
 msgid "Telefon raqami"
@@ -143,12 +146,12 @@ msgstr "Адрес"
 msgid "Yangilash"
 msgstr "Обновлять"
 
-#: .\accounts\templates\password_change.html:13
+#: .\accounts\templates\password_change.html:12
 #: .\templates\includes\leader_left.html:8
 msgid "Parolni o'zgartirish"
 msgstr "зменить пароль"
 
-#: .\accounts\templates\password_change.html:57
+#: .\accounts\templates\password_change.html:56
 msgid "Saqlash"
 msgstr "Сохранять"
 
@@ -158,13 +161,9 @@ msgstr "Пароль успешно изменен."
 
 #: .\accounts\templates\password_change_done.html:17
 #: .\accounts\templates\signin.html:68 .\accounts\templates\signup.html:68
-#: .\templates\includes\header.html:137
+#: .\templates\includes\header.html:76
 msgid "Tizimga kirish"
 msgstr "Авторизоваться"
-
-#: .\accounts\templates\profile-data.html:4 .\templates\includes\left.html:11
-msgid "Mening ma'lumotlarim"
-msgstr "Моя информация"
 
 #: .\accounts\templates\profile-data.html:47
 msgid "Manzili"
@@ -220,21 +219,22 @@ msgstr "Такой пользователь уже существует!"
 
 #: .\accounts\views.py:55
 msgid "id yoki parol xato! Iltimos tekshirib qaytadan kiriting."
-msgstr "ошибка идентификатора или пароля! Пожалуйста, проверьте и введите снова."
+msgstr ""
+"ошибка идентификатора или пароля! Пожалуйста, проверьте и введите снова."
 
 #: .\accounts\views.py:97
 msgid "Ma'lumot muvaffaqqiyatli o'zgartirildi."
 msgstr "Информация успешно изменена."
 
-#: .\config\settings.py:130
+#: .\config\settings.py:129
 msgid "Uzbek"
 msgstr "Uzbek"
 
-#: .\config\settings.py:131
+#: .\config\settings.py:130
 msgid "English"
 msgstr "English"
 
-#: .\config\settings.py:132
+#: .\config\settings.py:131
 msgid "Russian"
 msgstr "Russian"
 
@@ -246,48 +246,48 @@ msgstr "Позиция"
 msgid "Leaders"
 msgstr "Лидеры"
 
-#: .\main\templates\all-services.html:10 .\templates\includes\left.html:7
+#: .\main\templates\all-services.html:11 .\templates\includes\left.html:7
 msgid "Barcha xizmatlar"
 msgstr "Все услуги"
 
-#: .\main\templates\all-services.html:16
+#: .\main\templates\all-services.html:17
 msgid "Rahbariyatga ariza yuborish"
 msgstr "Отправить заявку руководству"
 
-#: .\main\templates\all-services.html:17 .\main\templates\all-services.html:24
+#: .\main\templates\all-services.html:18 .\main\templates\all-services.html:25
 msgid "batafsil"
 msgstr "читать далее"
 
-#: .\main\templates\all-services.html:23
+#: .\main\templates\all-services.html:24
 msgid "Talabalar turar joyiga ariza berish"
 msgstr "Подать заявку на студенческое общежитие"
 
-#: .\main\templates\appeal-to-leader.html:17
+#: .\main\templates\appeal-to-leader.html:19
 msgid "Rahbariyatga Murojaat"
 msgstr "Обращение к лидерам"
 
-#: .\main\templates\appeal-to-leader.html:28
+#: .\main\templates\appeal-to-leader.html:30 .\templates\home.html:130
 msgid "Batafsil"
 msgstr "читать далее"
 
-#: .\main\templates\appeal-to-leader.html:42
-#: .\main\templates\appeal_detail.html:23
+#: .\main\templates\appeal-to-leader.html:44
+#: .\main\templates\appeal_detail.html:31
 msgid "Murojaat turi"
 msgstr "Тип заявления"
 
-#: .\main\templates\appeal-to-leader.html:52
+#: .\main\templates\appeal-to-leader.html:54
 msgid "Rahbariyat"
 msgstr "Лидерство"
 
-#: .\main\templates\appeal-to-leader.html:70 .\main\templates\appeal.html:53
+#: .\main\templates\appeal-to-leader.html:72 .\main\templates\appeal.html:53
 msgid "Fayl yuklash"
 msgstr "Загрузить файл"
 
-#: .\main\templates\appeal-to-leader.html:76
+#: .\main\templates\appeal-to-leader.html:78
 msgid "Xabar matni"
 msgstr "Текст заявки"
 
-#: .\main\templates\appeal-to-leader.html:83
+#: .\main\templates\appeal-to-leader.html:85
 msgid ""
 "Qonun talablari doirasida shaxsga doir maʼlumotlarimdan foydalanishga "
 "rozilik bildiraman"
@@ -295,8 +295,8 @@ msgstr ""
 "Я согласен на использование моих персональных данных в соответствии с "
 "требованиями закона"
 
-#: .\main\templates\appeal-to-leader.html:88 .\main\templates\appeal.html:62
-#: .\main\templates\appeal_detail.html:69
+#: .\main\templates\appeal-to-leader.html:90 .\main\templates\appeal.html:62
+#: .\main\templates\appeal_detail.html:81
 msgid "Yuborish"
 msgstr "Отправка"
 
@@ -308,48 +308,48 @@ msgstr "Предмет заявки"
 msgid "O'qituvchi tanlash"
 msgstr "Выбор учителя"
 
-#: .\main\templates\appeal_detail.html:7 .\main\templates\appeal_detail.html:59
-#: .\main\templates\appeal_detail.html:65
+#: .\main\templates\appeal_detail.html:8 .\main\templates\appeal_detail.html:68
+#: .\main\templates\appeal_detail.html:77
 msgid "Javob yozish"
 msgstr "Напишите ответ"
 
-#: .\main\templates\appeal_detail.html:11 .\main\templates\appeal_list.html:19
+#: .\main\templates\appeal_detail.html:19 .\main\templates\appeal_list.html:19
 msgid "F.I.SH"
 msgstr "Ф.И.О"
 
-#: .\main\templates\appeal_detail.html:15
+#: .\main\templates\appeal_detail.html:23
 msgid "Yo'nalishi"
 msgstr "Направление"
 
-#: .\main\templates\appeal_detail.html:27
+#: .\main\templates\appeal_detail.html:35
 msgid "Murojaat matni"
 msgstr "Текст заявки"
 
-#: .\main\templates\appeal_detail.html:34
+#: .\main\templates\appeal_detail.html:42
 msgid "Fakulteti"
 msgstr "Факультет"
 
-#: .\main\templates\appeal_detail.html:38
+#: .\main\templates\appeal_detail.html:46
 msgid "Guruhi"
 msgstr "Группа"
 
-#: .\main\templates\appeal_detail.html:42
+#: .\main\templates\appeal_detail.html:50
 msgid "Telefon raqam"
 msgstr "Номер телефона"
 
-#: .\main\templates\appeal_detail.html:46
+#: .\main\templates\appeal_detail.html:54
 msgid "Murojaat mavzusi"
 msgstr "Предмет заявки"
 
-#: .\main\templates\appeal_detail.html:51
+#: .\main\templates\appeal_detail.html:59
 msgid "Fayl"
 msgstr "Файл"
 
-#: .\main\templates\appeal_detail.html:53
+#: .\main\templates\appeal_detail.html:61
 msgid "Faylni yuklash"
 msgstr "Загрузить файл"
 
-#: .\main\templates\appeal_list.html:15 .\templates\includes\header.html:68
+#: .\main\templates\appeal_list.html:15 .\templates\includes\header.html:18
 msgid "Murojaatlar ro'yhati"
 msgstr "Список литературы"
 
@@ -365,11 +365,11 @@ msgstr "телефон"
 msgid "Harakat"
 msgstr "действие"
 
-#: .\main\templates\appeal_list.html:48 .\main\templates\appeal_list.html:52
+#: .\main\templates\appeal_list.html:53 .\main\templates\appeal_list.html:57
 msgid "Oldingi"
 msgstr "Предыдущий"
 
-#: .\main\templates\appeal_list.html:61 .\main\templates\appeal_list.html:65
+#: .\main\templates\appeal_list.html:66 .\main\templates\appeal_list.html:70
 msgid "Keyingi"
 msgstr "Следующий"
 
@@ -403,98 +403,110 @@ msgstr "Время отправки"
 msgid "Murojaat muvaffaqqiyatli yuborildi."
 msgstr "Запрос успешно отправлен."
 
-#: .\main\views.py:107
+#: .\main\views.py:119
 msgid "Javob muvaffaqqiyatli saqlandi."
 msgstr "Ответ успешно сохранен."
 
-#: .\templates\home.html:10 .\templates\home.html:50
-#: .\templates\includes\left.html:5
+#: .\templates\home.html:14 .\templates\home.html:75
+#: .\templates\includes\header.html:26 .\templates\includes\left.html:5
 msgid "Interaktiv xizmatlar"
 msgstr "Интерактивные услуги"
 
-#: .\templates\home.html:12
+#: .\templates\home.html:16
 msgid "Quyidagi"
 msgstr "Следующее"
 
-#: .\templates\home.html:12
+#: .\templates\home.html:16
 msgid "interaktiv xizmatlar"
 msgstr "Интерактивные услуги"
 
-#: .\templates\home.html:13
+#: .\templates\home.html:17
 msgid "bilan siz bizning xizmatlarimizdan masofadan turib"
 msgstr "с вами удаленно из наших сервисов"
 
-#: .\templates\home.html:14
+#: .\templates\home.html:18
 msgid "foydalanishingiz mumkin."
 msgstr "вы можете использовать."
 
-#: .\templates\home.html:19 .\templates\includes\header.html:86
+#: .\templates\home.html:31 .\templates\includes\header.html:29
 msgid "Rahbarlarga Murojaat"
 msgstr "Обращение к лидерам"
 
-#: .\templates\home.html:20
+#: .\templates\home.html:32
 msgid "Taklif va shikoyatlaringizni yuboring"
 msgstr "Оставляйте свои предложения и жалобы"
 
-#: .\templates\home.html:24
+#: .\templates\home.html:38 .\templates\includes\header.html:30
 msgid "Elektron kutubxona"
 msgstr "Электронная библиотека"
 
-#: .\templates\home.html:25
+#: .\templates\home.html:39
 msgid "Onlayn kutubxonadan foydalanish"
 msgstr "Использование онлайн-библиотеки"
 
-#: .\templates\home.html:29
+#: .\templates\home.html:45 .\templates\includes\header.html:33
 msgid "Ma'lumotnoma olish"
 msgstr "Получить ссылку"
 
-#: .\templates\home.html:30
+#: .\templates\home.html:46
 msgid "Xodimlar uchun ish joyi ma'lumotini oling"
 msgstr "Получить информацию о местонахождении работы для сотрудников"
 
-#: .\templates\home.html:34
+#: .\templates\home.html:52
 msgid "Diplomni tekshirish (Talabalar)"
 msgstr "Проверка диплома (студенты)"
 
-#: .\templates\home.html:35
+#: .\templates\home.html:53
 msgid "Talabalar uchun diplom tekshirish tizimi"
 msgstr "Система проверки диплома для студентов"
 
-#: .\templates\home.html:39
+#: .\templates\home.html:59
 msgid "Shartnoma olish (Talabalar)"
 msgstr "Получить контракт (Студенты)"
 
-#: .\templates\home.html:40
+#: .\templates\home.html:60
 msgid "Talabalar uchun shartnoma olish tizimi"
 msgstr "Система получения контракта для студентов"
 
-#: .\templates\home.html:44
+#: .\templates\home.html:66
 msgid "Yotoqxonaga ariza berish"
 msgstr "Подать заявку на общежитие"
 
-#: .\templates\home.html:45
+#: .\templates\home.html:67
 msgid "Yotoqxonaga online ariza berish"
 msgstr "Подать заявку на общежитие онлайн"
 
-#: .\templates\home.html:50
+#: .\templates\home.html:75
 msgid "Statistikasi"
 msgstr "Статистика"
 
-#: .\templates\home.html:55
+#: .\templates\home.html:80
 msgid "Kelib tushgan murojaatlar"
 msgstr "Входящие обращения"
 
-#: .\templates\home.html:60
+#: .\templates\home.html:85
 msgid "Javob berilgan murojaatlar"
 msgstr "Ответы на обращения"
 
-#: .\templates\home.html:65
+#: .\templates\home.html:90
 msgid "Jarayondagi murojaatlar"
 msgstr "Рассмотрение апелляций"
 
-#: .\templates\home.html:70
+#: .\templates\home.html:95
 msgid "Boshqa"
 msgstr "Другой"
+
+#: .\templates\home.html:114
+msgid "Ijara uylari"
+msgstr "Аренда домов"
+
+#: .\templates\home.html:120
+msgid "Icharaga beruvchining F.I.SH"
+msgstr "Арендодатель Ф.И.О."
+
+#: .\templates\home.html:122
+msgid "Ijara xonadonining bir oylik narxi"
+msgstr "Стоимость аренды квартиры за месяц"
 
 #: .\templates\includes\footer.html:7
 msgid "Xarita"
@@ -532,42 +544,34 @@ msgstr ""
 "Если вы нашли ошибку в тексте, выделите ее и нажмите Ctrl+Enter, чтобы "
 "сообщить об этом администрации"
 
-#: .\templates\includes\header.html:56
+#: .\templates\includes\header.html:8
 msgid "Sharof Rashidov nomidagi Samarqand davlat universiteti Urgut filiali"
 msgstr ""
 "Ургутский филиал Самаркандского государственного университета имени Шарофа "
 "Рашидова"
 
-#: .\templates\includes\header.html:74
+#: .\templates\includes\header.html:22
 msgid "Bosh sahifa"
 msgstr "Домашняя страница"
 
-#: .\templates\includes\header.html:78
-msgid "Interaktiv Xizmatlar "
-msgstr "Интерактивные услуги"
-
-#: .\templates\includes\header.html:89
+#: .\templates\includes\header.html:31
 msgid "Dimlomni tekshirish (talabalar)"
 msgstr "Проверка диплома (студенты)"
 
-#: .\templates\includes\header.html:92
+#: .\templates\includes\header.html:32
 msgid "Shartnoma olish"
 msgstr "Получить контракт"
 
-#: .\templates\includes\header.html:95
-msgid "Ma&#039;lumotnoma olish"
-msgstr "Получить ссылку"
-
-#: .\templates\includes\header.html:101
+#: .\templates\includes\header.html:37
 msgid "Biz haqimizda"
 msgstr "о нас"
 
-#: .\templates\includes\header.html:123 .\templates\includes\header.html:127
+#: .\templates\includes\header.html:66 .\templates\includes\header.html:68
 msgid "Profil"
 msgstr "Профиль"
 
-#: .\templates\includes\header.html:131
-#: .\templates\includes\leader_left.html:10 .\templates\includes\left.html:16
+#: .\templates\includes\header.html:71 .\templates\includes\leader_left.html:10
+#: .\templates\includes\left.html:16
 msgid "Tizimdan chiqish"
 msgstr "выход"
 
@@ -578,6 +582,10 @@ msgstr "Информация профиля"
 #: .\templates\includes\left.html:9
 msgid "Javoblarni ko'rish"
 msgstr "Посмотреть ответы"
+
+#: .\templates\includes\left.html:11
+msgid "Mening ma'lumotlarim"
+msgstr "Моя информация"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:15
 msgid "Messages"
@@ -1789,6 +1797,12 @@ msgstr ""
 #: .\venv\Lib\site-packages\modeltranslation\widgets.py:24
 msgid "None"
 msgstr ""
+
+#~ msgid "Interaktiv Xizmatlar "
+#~ msgstr "Интерактивные услуги"
+
+#~ msgid "Ma&#039;lumotnoma olish"
+#~ msgstr "Получить ссылку"
 
 #~ msgid "Bog&#039;lanish"
 #~ msgstr "Связь"
