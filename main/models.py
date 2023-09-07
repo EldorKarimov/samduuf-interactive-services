@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import FileExtensionValidator
 from django.utils.translation import gettext_lazy as _
+from ckeditor_uploader.fields import RichTextUploadingField
 
 from accounts.models import Student
 
@@ -29,7 +30,7 @@ class Appeal(models.Model):
     )
     leader = models.ForeignKey(Leader, on_delete=models.CASCADE)
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    message = models.TextField()
+    message = RichTextUploadingField()
     theme = models.CharField(max_length=128)
     file_upload = models.FileField(upload_to='upload/path/', validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png', 'pdf', 'docx', 'pptx'])], null=True, blank=True)
     type_application = models.CharField(max_length=15, choices=TYPE_APPLICATION)
@@ -44,7 +45,7 @@ class Appeal(models.Model):
     
 class Answer(models.Model):
     appeal = models.OneToOneField(Appeal, on_delete=models.CASCADE)
-    message = models.TextField()
+    message = RichTextUploadingField()
     student_id = models.CharField(max_length=15)
     leader = models.CharField(max_length=128)
 
