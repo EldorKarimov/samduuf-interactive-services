@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # apps
     'main', 
     'accounts',
+    'admin_panel',
 
     # packages
     'widget_tweaks',
