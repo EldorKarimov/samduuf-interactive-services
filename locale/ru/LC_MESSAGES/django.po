@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-24 10:58+0500\n"
+"POT-Creation-Date: 2023-09-12 13:47+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -226,25 +226,45 @@ msgstr ""
 msgid "Ma'lumot muvaffaqqiyatli o'zgartirildi."
 msgstr "Информация успешно изменена."
 
-#: .\config\settings.py:129
+#: .\config\settings.py:122
 msgid "Uzbek"
 msgstr "Uzbek"
 
-#: .\config\settings.py:130
+#: .\config\settings.py:123
 msgid "English"
 msgstr "English"
 
-#: .\config\settings.py:131
+#: .\config\settings.py:124
 msgid "Russian"
 msgstr "Russian"
 
-#: .\main\models.py:10
+#: .\main\forms.py:8
+msgid "tanlang"
+msgstr "выбирать"
+
+#: .\main\models.py:11
 msgid "Position"
 msgstr "Позиция"
 
-#: .\main\models.py:14
+#: .\main\models.py:15
 msgid "Leaders"
 msgstr "Лидеры"
+
+#: .\main\models.py:26
+msgid "Tanlang"
+msgstr "выбирать"
+
+#: .\main\models.py:27
+msgid "taklif"
+msgstr "предложение"
+
+#: .\main\models.py:28
+msgid "shikoyat"
+msgstr "жалоба"
+
+#: .\main\models.py:29
+msgid "apellatsiya"
+msgstr "обращаться"
 
 #: .\main\templates\all-services.html:11 .\templates\includes\left.html:7
 msgid "Barcha xizmatlar"

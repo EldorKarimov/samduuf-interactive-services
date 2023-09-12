@@ -24,9 +24,9 @@ class Leader(models.Model):
 class Appeal(models.Model):
     TYPE_APPLICATION = (
         (None, _("Tanlang")),
-        ('taklif', _('taklif')),
-        ('shikoyat', _('shikoyat')),
-        ('apellatsiya', _('apellatsiya'))
+        ('tk', _('taklif')),
+        ('shk', _('shikoyat')),
+        ('apl', _('apellatsiya'))
     )
     leader = models.ForeignKey(Leader, on_delete=models.CASCADE)
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
