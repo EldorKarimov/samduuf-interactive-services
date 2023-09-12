@@ -8,7 +8,6 @@ from django.urls import path, include
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('hacktivist/', admin.site.urls),
-    path('admin/', include('admin_panel.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls'))
 ] 
 

@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.hashers import make_password
+
 
 class Student(AbstractUser):
     first_name = models.CharField(max_length=50)
@@ -34,6 +36,16 @@ class Student(AbstractUser):
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['first_name', 'last_name']
+
+    def hashing_password(self):
+        pass
+
+    def save(self, *args, **kwargs):
+        if not self.pk and not self.password.startswith('pbkdf2_sha256'):
+            self.password = make_password(self.password)
+        
+        # super() metod orqali asosiy saqlash metodini chaqirish
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
