@@ -12,7 +12,7 @@
             {% for ans in answers %}
             <div class="input-group mb-3">
                 <span class="input-group-text">{{ ans.leader }}</span>
-                <textarea class="form-control" aria-label="With textarea" readonly>{{ ans.message }}</textarea>
+                <textarea class="form-control" aria-label="With textarea" readonly>{{ ans.message|safe  }}</textarea>
             </div>
             {% endfor %}
         </div>
