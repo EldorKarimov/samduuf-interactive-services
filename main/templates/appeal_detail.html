@@ -33,7 +33,7 @@
         </div>
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label">{% trans "Murojaat matni" %}</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" readonly>{{ appeal_student.message|safe }}</textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" readonly>{{ appeal_student.message | slice:"3:"|slice:":-4" }}</textarea>
       </div>
         
       </div>

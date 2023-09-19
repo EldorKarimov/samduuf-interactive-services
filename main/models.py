@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import FileExtensionValidator
 from django.utils.translation import gettext_lazy as _
 from ckeditor_uploader.fields import RichTextUploadingField
+from ckeditor.fields import RichTextField
 
 from accounts.models import Student
 
@@ -45,7 +46,7 @@ class Appeal(models.Model):
     
 class Answer(models.Model):
     appeal = models.OneToOneField(Appeal, on_delete=models.CASCADE)
-    message = RichTextUploadingField()
+    message = RichTextField()
     student_id = models.CharField(max_length=15)
     leader = models.CharField(max_length=128)
 
