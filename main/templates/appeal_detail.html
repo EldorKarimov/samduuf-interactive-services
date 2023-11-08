@@ -29,7 +29,7 @@
         </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">{% trans "Murojaat turi" %}</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" value="{{ appeal_student.type_application }}" aria-describedby="emailHelp" readonly>
+          <input type="email" class="form-control" id="exampleInputEmail1" value="{{ appeal_student.get_type_application_display }}" aria-describedby="emailHelp" readonly>
         </div>
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label">{% trans "Murojaat matni" %}</label>
@@ -73,13 +73,10 @@
       
       <form action="" method="post">
         {% csrf_token %}
-        <div class="mb-3">
-          <label for="answerFormControlTextArea" class="form-label">{% trans "Javob yozish" %}</label>
-          <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea> -->
-          {% render_field form.message rows="20" cols="20" title="Hello, world!" %}
-          <br>
+        
+          {{ form.as_p }}
           <button type="submit" class="btn btn-success mb-5">{% trans "Yuborish" %}</button>
-      </div>
+      
       </form>
       
     </div>
