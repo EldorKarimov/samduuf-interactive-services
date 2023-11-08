@@ -33,7 +33,7 @@
         </div>
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label">{% trans "Murojaat matni" %}</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" readonly>{{ appeal_student.message | slice:"3:"|slice:":-4" }}</textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" readonly>{{ appeal_student.message }}</textarea>
       </div>
         
       </div>
@@ -74,9 +74,9 @@
       <form action="" method="post">
         {% csrf_token %}
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">{% trans "Javob yozish" %}</label>
+          <label for="answerFormControlTextArea" class="form-label">{% trans "Javob yozish" %}</label>
           <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea> -->
-          {% render_field form.message class+="form-control" id="exampleFormControlTextarea1" rows="5" %}
+          {% render_field form.message rows="20" cols="20" title="Hello, world!" %}
           <br>
           <button type="submit" class="btn btn-success mb-5">{% trans "Yuborish" %}</button>
       </div>

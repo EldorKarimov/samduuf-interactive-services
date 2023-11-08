@@ -1,8 +1,7 @@
 from django.db import models
 from django.core.validators import FileExtensionValidator
 from django.utils.translation import gettext_lazy as _
-from ckeditor_uploader.fields import RichTextUploadingField
-from ckeditor.fields import RichTextField
+
 
 from accounts.models import Student
 
@@ -18,8 +17,6 @@ class Leader(models.Model):
     def __str__(self):
         return f"{self.leader.first_name} {self.leader.last_name}"
     
-    def get_full_name(self):
-        return f"{leader.leader.first_name} {leader.leader.last_name} {leader.leader.third_name}"
     
 
 class Appeal(models.Model):
@@ -31,7 +28,7 @@ class Appeal(models.Model):
     )
     leader = models.ForeignKey(Leader, on_delete=models.CASCADE)
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    message = RichTextUploadingField()
+    message = models.TextField()
     theme = models.CharField(max_length=128)
     file_upload = models.FileField(upload_to='upload/path/', validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png', 'pdf', 'docx', 'pptx'])], null=True, blank=True)
     type_application = models.CharField(max_length=15, choices=TYPE_APPLICATION)
@@ -46,7 +43,7 @@ class Appeal(models.Model):
     
 class Answer(models.Model):
     appeal = models.OneToOneField(Appeal, on_delete=models.CASCADE)
-    message = RichTextField()
+    message = models.TextField()
     student_id = models.CharField(max_length=15)
     leader = models.CharField(max_length=128)
 

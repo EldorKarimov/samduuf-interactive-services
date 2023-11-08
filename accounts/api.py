@@ -6,7 +6,7 @@ class HemisApi:
     def user_data_json(self, username, password):
         login_url = 'https://student.samduuf.uz/rest/v1/auth/login'
         user_url = 'https://student.samduuf.uz/rest/v1/account/me'
-        api_token = config('API_TOKEN')
+        api_token = "cmdTnbguE2O2OqTrbvLbjLN1zOLcKJuO"
         headers =  {
             "Authorization": f"Bearer {api_token}",
             "Content-Type":"application/json"

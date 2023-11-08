@@ -6,6 +6,7 @@ from .api import HemisApi
 from main.models import Leader
 from django.contrib.auth.forms import PasswordChangeForm
 from django.utils.translation import gettext_lazy as _
+from datetime import datetime
 
 class StudentRegisterForm(forms.Form, HemisApi):
     username = forms.CharField(max_length=50)
@@ -40,7 +41,7 @@ class StudentRegisterForm(forms.Form, HemisApi):
             paymentForm = user_data.get('data').get('paymentForm').get('name'),
             studentStatus = user_data.get('data').get('studentStatus').get('name'),
             image = user_data.get('data').get('image'),
-            birth_date = user_data.get('data').get('birth_date'),
+            birth_date = str(datetime.fromtimestamp(user_data.get('data').get('birth_date')).date()),
             passport_pin = user_data.get('data').get('passport_pin'),
             passport_number = user_data.get('data').get('passport_number'),
             gender = user_data.get('data').get('gender').get('name'),
