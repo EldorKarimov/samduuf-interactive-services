@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from .models import Leader, Appeal, Answer
+from .models import Leader, Appeal, Answer, RentalHouse
 
-admin.site.register([Appeal, Answer])
+admin.site.register([Appeal, Answer, RentalHouse])
 
 @admin.register(Leader)
 class LeaderAdmin(admin.ModelAdmin):

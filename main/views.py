@@ -3,7 +3,7 @@ from django.views import View
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 
-from .models import Leader, Appeal, Answer
+from .models import Leader, Appeal, Answer, RentalHouse
 from .forms import AppealForm, AnswerForm
 from accounts.permissions import CustomLoginRequiredMixin, CustomStudentLoginRequiredMixin
 from django.contrib import messages
@@ -17,13 +17,15 @@ def custom_404(request, exeption):
 
 class HomePageView(View):
     def get(self, request):
+        rentalHouse = RentalHouse.objects.last()
         appeal_count = Appeal.objects.count()
         answer_count = Answer.objects.count()
         appeal_in_process = appeal_count - answer_count
         context = {
             'appeal_count':appeal_count,
             'answer_count':answer_count,
-            'appeal_in_process':appeal_in_process
+            'appeal_in_process':appeal_in_process,
+            'rentalHouse':rentalHouse
         }
         return render(request, 'home.html', context)
     

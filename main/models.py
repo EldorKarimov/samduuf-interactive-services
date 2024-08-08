@@ -49,3 +49,12 @@ class Answer(models.Model):
 
     def __str__(self):
         return self.student_id
+    
+class RentalHouse(models.Model):
+    file = models.FileField(upload_to='media/rentalHouse/files', validators=[FileExtensionValidator(
+        allowed_extensions=['pdf', 'doc', 'docx', 'xls', 'xlsx']
+    )])
+    image = models.ImageField(upload_to='media/rentalHouse/images', null=True, blank=True)
+
+    def __str__(self):
+        return str(self.file.name)

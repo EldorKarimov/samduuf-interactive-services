@@ -124,10 +124,12 @@
         <div class="rent-house__read-more">
           <div class="row">
             <div class="col-lg-3">
-              <img src="{% static 'images/rent-house-qr.jpg' %}" alt="QR" class="rent-house-qr">
+              {% if rentalHouse.image %}
+              <img src="{{ rentalHouse.image.url }}" alt="QR" class="rent-house-qr">
+              {% endif %}
             </div>
             <div class="col-lg-6">
-              <a href="https://samduuf.uz/lfm/files/2/SamDUUF%20%20yangi%20ijara%20xonadonlar%2012.08.2023.pdf" target="_blank" class="btn btn-outline-primary">{% trans "Batafsil" %}</a>
+              <a href="{{ rentalHouse.file.url }}" target="_blank" class="btn btn-outline-primary">{% trans "Batafsil" %}</a>
             </div>
           </div>
         </div>
