@@ -3,7 +3,6 @@ django-jazzmin==2.6.0
 django-modeltranslation==0.18.11
 django-widget-tweaks==1.4.12
 Pillow==10.0.0
-psycopg2==2.9.7
 psycopg2-binary==2.9.9
 python-decouple==3.8
 requests==2.31.0
